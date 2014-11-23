@@ -290,6 +290,7 @@ oblekaj PS1 funkcje pokazujacą brancha
 => => => => =>S T A S H=> => => => => => => =>
 
 => git stash save "zachowaj na pozniej"
+=> git stash list ->>> lista zestashowanych
            
 =>=>=>=>=>=>=>=>=>BEHAT=>=>=>=>=>=>=>=>=>
 
