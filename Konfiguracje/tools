@@ -293,7 +293,8 @@ drugi commit nowa
 1 wpis na master
 to dopisalem na nowa
 to wpisalem na master
-wpis 1
+wpis 1 nowa
+wpis 2 nowa 
 
            
 =>=>=>=>=>=>=>=>=>BEHAT=>=>=>=>=>=>=>=>=>
