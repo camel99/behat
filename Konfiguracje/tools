@@ -287,10 +287,9 @@ M A S T E R  B R A N C H E
 => git merge --abort przerwanie mergowania gdy wystąpia konflikty
 oblekaj PS1 funkcje pokazujacą brancha
 
-pierwszy commit na nowa
-drugi commit nowa
+=> => => => =>S T A S H=> => => => => => => =>
 
-
+=> git stash save "zachowaj na pozniej"
            
 =>=>=>=>=>=>=>=>=>BEHAT=>=>=>=>=>=>=>=>=>
 
