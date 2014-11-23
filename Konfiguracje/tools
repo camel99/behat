@@ -1,0 +1,449 @@
+#############################################################
+klucz publiczny 
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDx7MySi6CMIR1ujQzalEj1uwYk4/IeUVbLGoTOySHMBNwBdv5/Mgy2wIfJW/+JDELhl3sGvABQiyE0c+K6FUhQnYMVRHugoafgLgYizXzI7gywOyGxBb9L8qZnVdvpzThFaXply+KKB+8ezxe6HfZro3y6FJx5Hml7L/DPtt6VZtA9lbJFNkJp7G7Jc+bVSvlOCMlN99kcPX0nWAJa5lxjkArZqgNv2dnRJb1+WLguZlIrcFD2ubPhoZ5HfjE4demUucSbW3PCxEefY0INaab6u5tAanowv9tszcORfA7dUuU7fqeDTZc5bEGp3AuqGVpZK4d0hb/dbWFqbo6SV44d root@Camel-FEDORA
+####################################################################
+
+###################################
+JENKINS
+Based on :
+https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+RedHat+distributions
+
+###################################
+1. Pobrać plik z http://pkg.jenkins-ci.org/redhat/
+2. Z prawami roota instalujemy Jenkins : sudo yum install jenkins
+3.START/STOP/RESTART - sudo service jenkins start/stop/restart
+4.Z poziomu przeglądarki : localhost:8080
+5.Konfiguracja współpracy Jenkinsa z GIT i GERRIT
+a. z poziomu przeglądarki localhost:8080.
+b. zarządzaj dodatkami
+c. Dodać pluginy:
+- SCM API Plugin
+- Gerrit Trigger
+- GITHub Plugin
+- GitHub API PLugin
+- GIT client plugin
+- GIT Plugin
+- 
+
+6. IMPORTANT links:
+https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+RedHat+distributions
+http://pkg.jenkins-ci.org/redhat/
+http://www.infoq.com/articles/Gerrit-jenkins-hudson
+
+#######################################################
+GITHUB
+#######################################################
+1. Zakładamy repo na stronie https://github.com/camel99/php.git
+2. gdzie koncowka php.git oznacza nazwę repozytorium
+3. dodajemy zdalne repo git remote add origin https://github.com/camel99/php.git
+4. sprawdzamy dane o repo git remote -v i sprawdzamy czy śa dane do fetch i pull
+5.możemy zrobić fetcha z repo jako hit fetch, jesli nie zadziała robimy najpierw pull'a: git pull
+6. robimy pusha do repo git push
+2.moje repo 'php' ma skrót 'maciej', czyli zamiast git fetch https://github.com/camel99/php.git moge zrobic git fetch maciej.
+3.git remote -v sprawdza nazwe repo
+4.dodawanie zdlanego repo: git remote origin https://github.com/camel99/php.git
+5.wypychanie zmian do zdlanego repo : git push origin master
+
+##################################################################
+
+			PHP, GIT, APACHE, 
+
+################################################################
+1. INSTALACJA PHP, phpMyAdmin, oraz git
+https://ask.fedoraproject.org/en/question/53827/howto-install-laravel-and-apache-on-fedora/
+
+$ sudo yum install httpd phpMyAdmin git
+2.Start apacha
+$ sudo service http start
+3.Automatyczne starowanie apacha z systemem:
+$ sudo systemctl enable httpd.service
+4.Anulowanie odpalania Apacha z systemem
+sudo systemctl disable httpd.service
+5. Instalacja composer'a
+$ curl -sS https://getcomposer.org/installer | php
+6. START/STOP Apacha
+apachectl start/stop/restart/status
+6. Sprawdzenie czy composer jest OK
+. sprawdzanie czy Apache jest odpalony : systemctl is-active httpd.service
+7. sprawdzenie dokłądniejsze działania Apacha systemctl status httpd.service
+##################################################################
+
+			INTELI J IDEA
+
+################################################################
+http://tutorialforlinux.com/2014/01/03/how-to-install-intellij-idea-13-on-fedora-20-3264bit-linux-easy-guide/
+1. Pobrac plik z https://www.jetbrains.com/idea/download/download_thanks.jsp
+2.Dwuklik na pliku
+##################################################################
+
+			BEHAT
+
+################################################################
+
+
+http://docs.behat.org/en/v2.5/quick_intro.html#installation
+
+##############################################################
+			LINUX
+###############################################################
+
+1. Sprawdzenie aktywnych procesów.
+systemctl list-units --type=service
+
+﻿Klucz publiczny 
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDx7MySi6CMIR1ujQzalEj1uwYk4/IeUVbLGoTOySHMBNwBdv5/Mgy2wIfJW/+JDELhl3sGvABQiyE0c+K6FUhQnYMVRHugoafgLgYizXzI7gywOyGxBb9L8qZnVdvpzThFaXply+KKB+8ezxe6HfZro3y6FJx5Hml7L/DPtt6VZtA9lbJFNkJp7G7Jc+bVSvlOCMlN99kcPX0nWAJa5lxjkArZqgNv2dnRJb1+WLguZlIrcFD2ubPhoZ5HfjE4demUucSbW3PCxEefY0INaab6u5tAanowv9tszcORfA7dUuU7fqeDTZc5bEGp3AuqGVpZK4d0hb/dbWFqbo6SV44d root@Camel-FEDORA
+
+
+I. JENKINS
+
+Based on:
+https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+RedHat+distributions
+
+1. Pobrać plik z http://pkg.jenkins-ci.org/redhat/
+2. Z prawami roota instalujemy Jenkins : sudo yum install jenkins
+3. START/STOP/RESTART - sudo service jenkins start/stop/restart
+4. Z poziomu przeglądarki : localhost:8080
+5. Konfiguracja współpracy Jenkinsa z GIT i GERRIT
+a. z poziomu przeglądarki localhost:8080.
+b. zarządzaj dodatkami
+c. Dodać pluginy:
+	- SCM API Plugin
+	- Gerrit Trigger
+	- GITHub Plugin
+	- GitHub API PLugin
+	- GIT client plugin
+	- GIT Plugin
+
+6. IMPORTANT links:
+
+https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+RedHat+distributions
+http://pkg.jenkins-ci.org/redhat/
+http://www.infoq.com/articles/Gerrit-jenkins-hudson
+http://www.infoq.com/articles/Gerrit-jenkins-hudson
+
+II. GITHUB
+
+1. Zakładamy repo na stronie https://github.com/camel99/php.git
+2. gdzie końcówka php.git oznacza nazwę repozytorium
+3. dodajemy zdalne repo git remote add origin https://github.com/camel99/php.git
+4. sprawdzamy dane o repo git remote -v i sprawdzamy czy są dane do fetch i pull
+5.możemy zrobić fetcha z repo jako hit fetch, jeśli nie zadziała robimy najpierw pull'a: git pull
+6. robimy pusha do repo git push
+2.moje repo 'php' ma skrót 'maciej', czyli zamiast git fetch https://github.com/camel99/php.git moge zrobic git fetch maciej.
+3.git remote -v sprawdza nazwę repo
+4.dodawanie zdalnego repo: git remote origin https://github.com/camel99/php.git
+5.wypychanie zmian do zdalnego repo : git push origin master
+
+III.PHP
+
+1. sprawdzanie czy serwer jest odpalony : systemctl is-active httpd.service
+2. sprawdzenie dokładniejsze systemctl status httpd.service
+
+INSTALACJA PHP, phpMyAdmin, oraz git
+1. https://ask.fedoraproject.org/en/question/53827/howto-install-laravel-and-apache-on-fedora/
+
+$ sudo yum install httpd phpMyAdmin git
+2.Start apacha
+$ sudo service http start
+3.Automatyczne starowanie apacha z systemem:
+$ sudo systemctl enable httpd.service
+4. Instalacja composer'a
+$ curl -sS https://getcomposer.org/installer | php
+5. Sprawdzenie czy composer jest OK
+6. sprawdzanie czy Apache jest odpalony : systemctl is-active httpd.service
+7. sprawdzenie dokłądniejsze działania Apacha systemctl status httpd.service
+
+IV. LINUX
+
+1. Sprawdzenie aktywnych procesów.
+systemctl list-units –type=service
+
+V. GIT
+http://git-scm.com/docs/git-stash
+http://readwrite.com/2013/10/02/github-for-beginners-part-2
+http://alblue.bandlem.com/Tag/git/
+
+1.INSTALACJA
+
+yum install curl-devel 
+yum install expat-devel 
+yum install gettext-devel 
+yum install openssl-devel 
+yum install zlib-devel
+yum install git-core gitweb
+2.POLECENIA
+=> shutdown zamkniecie LINUXA
+=> logout wylogowanie
+=> su root potem haslo - zmiana uzytkownika
+=> cat ~/.gitconfig
+
+=> Creating GIT repository => => => 
+=> mkdir project
+=> cd project
+=> git init
+=> git add "nazwa pliku" dodanie do śledzenia
+=> git diff co zostało zmienione w pliku
+=> git diff --cached bardziej szczegółowe
+=> git log historia zmian w plikach
+=> git log -p
+=> git log -p-2 - pokazuje 2ostatnie zmiany
+=> git log --stat - pokazuje tez statystyki
+=> git log --pretty=online/short/full/fuller/format - pokazuje dokladne zmiany
+=> git commit -m "komentarz" - zatwierdzenie z komentarzem
+=> git commit -a - zatwierdzenia z pominięciem poczekalni
+=> git reset HEAD "nazwa pliku" - usuwanie pliku z poczekalni
+=> git remote - wyswietlanie zdalnych repozytoriów
+=> git remote -v wyswietla dodatkowo zapamietany skrót
+=> git remote add [skrót] [url] dodawanie zdalnego repozytorium
+=> git fetch [nazwa zdalengo repo] pobieranie danych z repozytorium
+=> git fetch origin pobierze każdą nową pracę jaka została wypchnięta 			    na oryginalny serwer od momentu sklonowania go przez ciebie
+=> git pull automatycznie popbiera i merguje  dane z lokalnymi plikami
+
+=>=>=>=>=>=>=>=>=>CLONING GIT directory=>=>=>=>=>=>=>=>=>
+=> git remote -> sprawdza skonfigurowanie serwery
+=> git remote -v -> sprawdza skonfigurowanie serwery+nazwa skrótu
+# Clone using git protocol
+=> git clone git://github.com/drupal/drupal.git
+
+# Clone using http protocol
+=> git clone http://github.com/drupal/drupal.git
+
+# Git protocol is more efficient for cloning. But in the end you will get same thing.
+
+=> git remote add [skrót] [url] -. dodawania zdalnego repozytorium
+=> git fetch [nazwa-zdalengo-repozytorium] -> pobieranie danych z repozytorium
+
+=>=>=>=>=>=>=>=>=>ZMIANY W PLIKU=>=>=>=>=>=>=>=>=> 
+=> git checkout --nazawaPliku -> cofa zmiany w pliku
+=> git reset HEAD --nazwaPliku ->usuwanie pliku z poczekalni
+
+
+
+=> git push [nazwa-zdalnego-repo] [nazwa-gałęzi]
+git remote show [nazwa-zdalnego-repo] -> Inspekcja zmian w repozytorium
+=> git remote rename staraNazwa NowaNazwa -> zmiana nazwy repo zdalnego
+
+alt+F2 gnome-terminal =>>>>>> otwieranie nowego terminala
+=> citool - yum install git-gui a potem juz tylko git citool
+=> git fetch origin -> pobierze każdą nową prace jaka została wypchnieta na oryginalny serwer od momentu sklonowania go przez ciebie (lub ostatniego pobrania zmian).
+/home/maciej/Dokumenty'
+
+=> git diff HEAD
+=> git diff --staged
+=> gitk ->>>>>>>> kolorowe http://rogerdudler.github.io/git-guide/
+=> git branch nazwa ->>>>>>>>>>>>tworzenie nowej gałęzi
+=> git checkout nazwa ->>>>>>>>>> wchodzenie na nową gałąź
+=> git checkout -b nazwa ->>>>>>>tworzenie i wchodzenie na nowa gałąź 'nazwa'
+
+=>=>=>=>=>=>=>=>=> MERGOWANIE=>=>=>=>=>=>=>=>
+1.Nalezy z gałęzi 'testy' przejść na master => git checkout master
+2.Następnie robimy merga gałęzi 'testy' z 'master' => git merge testy
+3. Jeśli gałęź 'tetsy' nie jest juz potrzebna usuwa się ją:=> git branch -d testy, po mergu wskaźnik master wskazuje na migawke wskzaywana przez gałąź master
+4.Aby scalić swoja tesową gałąź z gałęzią master robimy z pozimou tej testowej gałęzi merga=> git merge master
+5. narzędzie graficzne do mergowania=> git mergetool
+
+=>=>=>=>=>=>=>=>=>Tworzenie zdalnego repozytorium=>=>=>=>=>=>=>=>=>
+=> touch README.md
+=> git init
+=> git add README.md
+=> git commit -m "first commit"
+=> git remote add origin https://github.com/camel99/konfiguracje.git
+=> git push -u origin master
+
+=> => => GIT ignore=> => => => => => => => 
+=> vim .gitignore i w środku dodac pliki ktore maja byc ignorowane
+=> git ls-tree HEAD
+=> git ls-tree master <nazwaKatlogu> wyswietla zawartosc katalogu, ekploracja katalogu
+=> git log --oneline
+=> git log --until="3 days"
+=> git log --author="Maciej"
+=> git log --grep="temp" poszuka commitów zawierających slowo temp
+=> git log -p
+=> git log --stat --summary
+=> git log --format=fuller
+=> git log --graph
+=> git log --oneline --graph --all --decorate
+=> git show <trzeba podac sha np. z git log --oneline>
+
+
+=> => => => =>BRANCHES=> => => => => => => => 
+M A S T E R  B R A N C H E 
+-------- HEAD ------ HEAD-------- HEAD  -------_ HEAD	------- HEAD
+|commit|=>>> |commit|=>>> |commit|=>>>  |commit|=>>>>>>>|commit|=>>> 
+--------     --------     -------- /    --------    \   --------  
+                                    / HEAD          \ mergowanie do mastera
+			NEW BRANCH  /   -------HEAD  \ 
+				    /   |commit|=>>> 
+					--------    
+=> git branch
+=> git branch nowa tworzy branch
+=> ls -la .git/refs/heads  pokazuje branche
+=> git checkout <nazwa brancha>
+=> git diff --color-words master..nowa
+=> git branch –merged pokazuje ktora gałąż jest całkowicie zmergowana
+=> git branch –m stara_nazwa nowa_nazwa  zmienia nazwe brancha
+
+oblekaj PS1 funkcje pokazujacą brancha
+
+pierwszy commit na nowa
+drugi commit nowa
+
+1 wpis na master
+
+           
+=>=>=>=>=>=>=>=>=>BEHAT=>=>=>=>=>=>=>=>=>
+
+bin/behat --dry-run --append-snippets
+bin/behat -di
+bin/behat -dl
+bin/behat --name ls
+
+
+
+
+
+1. Screen lock
+	1.1 sudo yum install xscreensaver 
+	1.2 Ustawienia->Klawiatura->Skróty
+	1.3 Dodajemy własny skrót o dowolnej nazwie z komendą: xscreensaver-command -lock
+	1.4 Wygaszacz ekranu -> wybierz wygaszacz
+	1.5 Działa
+
+2. Skype
+	2.1 wget http://download.skype.com/linux/skype-4.3.0.37-fedora.i586.rpm
+	2.2 sudo yum install skype-4.3.0.37-fedora.i586.rpm
+
+3. Google Chrome
+	3.1 sudo vi /etc/yum.repos.d/google-chrome.repo
+	3.2 w powyższym pliku dopisać:
+		[google-chrome]
+			name=google-chrome
+			baseurl=http://dl.google.com/linux/chrome/rpm/stable/x86_64
+enabled=1
+gpgcheck=1
+			gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
+	3.3 rpm --import https://dl-ssl.google.com/linux/linux_signing_key.pub
+	3.4 sudo yum install google-chrome-stable
+
+4. Java
+
+Instalacja w jednej linii :$ su -c "yum install java-1.7.0-openjdk"
+	4.1 pobierz javę z: http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html
+	4.2 sudo su
+	4.3 rpm -Uvh /path/to/binary/jdk-7u51-linux-x64.rpm
+	4.4 alternatives --install /usr/bin/java java /usr/java/latest/jre/bin/java 200000
+	4.5 alternatives --install /usr/bin/javaws javaws /usr/java/latest/jre/bin/javaws 200000
+	4.6 alternatives --install /usr/lib64/mozilla/plugins/libjavaplugin.so libjavaplugin.so.x86_64 /usr/java/latest/jre/lib/amd64/libnpjp2.so 200000
+	4.7 alternatives --install /usr/bin/javac javac /usr/java/latest/bin/javac 200000
+	4.8 alternatives --install /usr/bin/jar jar /usr/java/latest/bin/jar 200000
+5. PHP
+	5.1 sudo yum install php-soap php-xdebug php-intl php-redis
+	5.2 sudo pecl install zip
+	5.3 sudo pear channel-discover pear.phpunit.de
+	5.4 sudo pear channel-discover components.ez.no
+	5.5 sudo pear channel-discover pear.symfony-project.com
+	5.6 sudo pear install phpunit/PHPUnit
+	5.7 phpunit --version
+
+6. PHPBrew (do projektu nMEL jest potrzebny php w wersji 5.3.28, phpBrew umożliwia na przełączanie się pomiędzy wersjami php'a)
+	6.1 curl -L -O https://github.com/phpbrew/phpbrew/raw/1.13.1/phpbrew
+	6.2 chmod +x phpbrew
+	6.3 sudo mv phpbrew /usr/bin/phpbrew
+	6.4 vi /etc/profile.d/phpbrew.sh – zawartość:
+		export PHPBREW_ROOT=/opt/phpbrew
+		export PHPBREW_HOME=/opt/phpbrew
+		source $PHPBREW_HOME/bashrc
+	6.5 source /etc/profile.d/phpbrew.sh
+	6.6 phpbrew init
+	6.7 source /etc/profile.d/phpbrew.sh
+	6.8 phpbrew install 5.3.28 +default+phar+pcre+icu+iconv+ftp+gd+intl+dbs+apxs2+exif+gettext+openssl+tidy+soap -- --with-libdir=lib64 --with-freetype-dir=/usr/include/freetype2
+	6.9 phpbrew switch 5.3.28
+	6.10 sudo /opt/phpbrew/php/php-5.3.28/bin/pear config-set auto_discover 1
+	6.11  sudo /opt/phpbrew/php/php-5.3.28/bin/pear install pear.phpunit.de/PHPUnit
+6.12 sudo vim /opt/phpbrew/php/php-5.3.28/etc/php.ini – modyfikacja (w razie potrzeby odkomentować)
+		memory_limit = 1024444M
+		date.timezone = Europe/Warsaw
+		pdo_mysql.default_socket=/var/lib/mysql/mysql.sock
+	
+7. Redis
+	7.1 sudo yum install redis
+	7.2 sudo systemctl enable redis
+	7.3 sudo systemctl enable httpd
+	7.4 sudo systemctl enable mariadb
+	7.5 sudo systemctl start redis
+	7.6 sudo systemctl start httpd
+	7.7 sudo systemctl start mariadb
+
+7. PhpMyAdmin
+	7.1 sudo yum install phpmyadmin
+	7.2 sudo gedit /etc/phpMyAdmin/config.inc.php
+	7.3 Do powyższego pliku dodać/zmodyfikować
+		$cfg['Servers'][$i]['socket']	= '/var/lib/mysql/mysql.sock';
+		$cfg['Servers'][$i]['connect_type'] = 'http';
+
+8. MySQLWorkbench
+	8.1 pobrać ze strony
+	8.2 sudo yum install ctemplate tinyxml vsqlite++ compat-lua-libs
+8.3 sudo rpm -i /home/jacekblendowski/Pobrane/mysql-workbench-community-6.1.7-1.fc20.x86_64.rpm
+
+9. Code-sniffer
+sudo su
+pear install PHP_CodeSniffer
+pear config-show | grep php_dir
+cd /opt/phpbrew/php/php-5.3.28/lib/php
+cd PHP/CodeSniffer/Standards/
+git clone https://github.com/radepal/Symfony2-coding-standard.git Symfony2
+phpcs --config-set default_standard Symfony2
+
+10. nMEL Project (informacje zebrane i uszczegółowione na podstawie tej strony )
+	10.1 Keygen - http://confluence.ioki.com.pl/display/nMEL3/Gerrit – zakładanie konta pkt 2 i 			3, wyślij klucz publiczny Grzegorzowi abyś miał dostęp do wszystkich 				zasobów dla projektu, po nadaniu dostępów
+	10.2 git clone ssh://uzytkownik_ioki@gerrit.ioki.com.pl:29418/newngmel.git
+	10.3 są potrzebne dwie bazy: <nazwa_uzytkownika>_ngml i 							<nazwa_uzytkownika>_ngml_content w tym celu
+		10.3.1 sudo service mysqld start
+		10.3.2 mysql -u root
+		10.3.3 create database <nazwa_uzytkownika>_ngml;
+		10.3.4 create database <nazwa_uzytkownika>_ngml_content;
+		10.3.5 create user user;
+		10.3.6 grant all on <nazwa_uzytkownika>_ngml.* to 'user'@'localhost' identified by 'password';
+		10.3.7 grant all on <nazwa_uzytkownika>_ngml_content.* to 'user'@'localhost' identified by 'password';
+	10.4 W projekcie tworzymy dwa katalogi i dajemy im uprawnienia
+		10.4.1 mkdir app/cache
+		10.4.2 mkdir app/logs
+		10.4.3 chmod 0777 -R app/cache app/logs
+	10.5 W parameters.ini dodajemy root_url
+			root_url = "http://localhost/newngmel/web"
+	10.6 ./configure_script.sh --prod-db-host=localhost –prod-db-port=3306 –prod-db-name=baza_ngml --prod-db-user=user --prod-db-password=password –content-db-name=baza_ngml_content;
+	10.7 php app/console assetic:dump; php app/console assetic:dump –env=prod
+	10.8 powiązanie do folderu /var/www/html (w ten sposób projekt może być w lokalnym folderze)
+		sudo ln -s /home/jacekblendowski/Git/newngmel /var/www/html/newngmel
+	10.9 Działa użytkownicy i hasła są tutaj, a adres jest taki: 							http://localhost/newngmel/web/app_dev.php/login
+
+11. Behat config
+	11.1 Przed wykonaniem instrukcji ze strony wykonaj: sudo yum install pv
+11.2 Selenium-server-standalone pobieramy z głównej strony Selenium - najnowszą dostępną wersję
+12. Konfiguracja GIT
+git config --global user.email "dominika.jedrzejczak@pearson.com"
+git config --global user.name "Dominika Jedrzejczak"
+
+sudo yum install kdiff3
+
+git config --global merge.tool kdiff3
+git config --global diff.tool kdiff3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
