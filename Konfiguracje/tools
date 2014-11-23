@@ -284,7 +284,7 @@ M A S T E R  B R A N C H E
 => git diff --color-words master..nowa
 => git branch –merged pokazuje ktora gałąż jest całkowicie zmergowana
 => git branch –m stara_nazwa nowa_nazwa  zmienia nazwe brancha
-
+=> git merge --abort przerwanie mergowania gdy wystąpia konflikty
 oblekaj PS1 funkcje pokazujacą brancha
 
 pierwszy commit na nowa
@@ -295,6 +295,7 @@ to dopisalem na nowa
 to wpisalem na master
 wpis 1 nowa
 wpis 2 nowa 
+to tez na nowa
 
            
 =>=>=>=>=>=>=>=>=>BEHAT=>=>=>=>=>=>=>=>=>
