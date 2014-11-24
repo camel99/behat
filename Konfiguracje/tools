@@ -266,7 +266,7 @@ alt+F2 gnome-terminal =>>>>>> otwieranie nowego terminala
 => git log --graph
 => git log --oneline --graph --all --decorate
 => git show <trzeba podac sha np. z git log --oneline>
-
+=> git config --global alias.logg "log --graph --decorate --oneline --abbrev-commit --all" ->>>> alias
 
 => => => => =>BRANCHES=> => => => => => => => 
 M A S T E R  B R A N C H E 
@@ -288,6 +288,8 @@ M A S T E R  B R A N C H E
 oblekaj PS1 funkcje pokazujacą brancha
 => git branch -r pokazuje zdalne gałęzie
 => git branch -a pokazuje wszystkie gałęzie
+=> git log --oneline origin/master pokazuje zmiany na zdalnym repo
+
 => => => => =>S T A S H=> => => => => => => =>
 
 => git stash save "zachowaj na pozniej"
