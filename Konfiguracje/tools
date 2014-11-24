@@ -286,7 +286,8 @@ M A S T E R  B R A N C H E
 => git branch –m stara_nazwa nowa_nazwa  zmienia nazwe brancha
 => git merge --abort przerwanie mergowania gdy wystąpia konflikty
 oblekaj PS1 funkcje pokazujacą brancha
-
+=> git branch -r pokazuje zdalne gałęzie
+=> git branch -a pokazuje wszystkie gałęzie
 => => => => =>S T A S H=> => => => => => => =>
 
 => git stash save "zachowaj na pozniej"
