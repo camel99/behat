@@ -300,8 +300,36 @@ bin/behat -di
 bin/behat -dl
 bin/behat --name ls
 
+=>=>=>=>=>=>=>=>=>M I N K=>=>=>=>=>=>=>=>=>
+https://github.com/Behat/en-mink.behat.org/blob/master/index.rst#form-field-manipulations
+
+=>=>=>=>=>=>=>=>=>URUCHAMIANIE LOKALNIE TESTÓW=>=>=>=>=>=>=>=>=>
+uruchamianie lokalnie testów, tak, żeby przeglądarka sie
+uruchamiała:
+a. otworzyc plik konfiguracyjny behat.base.yml 
+b.z konsoli będąc w katalogu z selenium odpalamy:
 
 
+java -jar selenium-server-standalone-2.42.2.jar
+-Dwebdriver.chrome.driver=chromedriver
+
+
+pozwala  to sprawdzic adres lokalny kompa
+:http://127.0.0.1:4444/wd/hub
+
+
+b. w części IOKI\FunctionalTestsBundle\Behat\MinkExtension:
+robimy po wpisie wd_host: '10.157.49.172:4444/wd/hub'
+ctrl+d i wpisujemy:(uwaga ba ilsoc spacji ipowinno byc 8)
+wd_host:  'http://127.0.0.1:4444/wd/hub'
+=>>>> jest to lokalny adres mojego PC
+
+
+c.zakomentowac linie #wd_host: '10.157.49.172:4444/wd/hub'
+d. odpalic selenium
+ 
+e. odpalic test behata: bin/behat 
+ 
 
 
 1. Screen lock
