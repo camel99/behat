@@ -121,6 +121,12 @@ EXAMPLES:
 | 12    | 5   | 7
 | 20    | 5   | 15
 wszystko pomiędzy < > jest traktowane jako placeholder (jako zmienna) i jest zastępowane danymi z sekcji EXAMPLES (poza 1 wierszem)
+=> Używaj table. Nie myl ich ze SCENARIO OUTLINE
+=> tagi oddziela się spacjami @tag1 @tag2 @tag3
+=> komentarz we feature musi miec format :
+/**
+* @When I do something with :methodargument
+*/
 
 ##############################################################
 			LINUX
@@ -309,6 +315,7 @@ alt+F2 gnome-terminal =>>>>>> otwieranie nowego terminala
 
 => => => => =>BRANCHES=> => => => => => => => 
 http://longair.net/blog/2009/04/16/git-fetch-and-merge/
+https://www.atlassian.com/git/tutorials/syncing/git-fetch
 
 M A S T E R  B R A N C H E 
 -------- HEAD ------ HEAD-------- HEAD  -------_ HEAD	------- HEAD
@@ -331,7 +338,7 @@ oblekaj PS1 funkcje pokazujacą brancha
 => git branch -a pokazuje wszystkie gałęzie
 => git log --oneline origin/master pokazuje zmiany na zdalnym repo
 => git branch -r pokazuje zdalne gałęzie
-=> 
+=> git branch -a
 => You mostly do with remote-tracking branches is one of the following:
 
     Update them with git fetch
