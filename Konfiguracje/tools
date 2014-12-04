@@ -84,6 +84,8 @@ http://tutorialforlinux.com/2014/01/03/how-to-install-intellij-idea-13-on-fedora
 
 http://docs.behat.org/en/v2.5/quick_intro.html#installation
 
+=> bin/behat --name Nazwa_tagu ----dry-run --append-snippets -> dodaje funkcje do feature 
+
 ##############################################################
 			LINUX
 ###############################################################
@@ -315,7 +317,7 @@ a. otworzyc plik konfiguracyjny behat.base.yml
 b.z konsoli będąc w katalogu z selenium odpalamy:
 
 
-java -jar selenium-server-standalone-2.42.2.jar
+java -jar selenium-server-standalone-2.42.3.jar
 -Dwebdriver.chrome.driver=chromedriver
 
 
