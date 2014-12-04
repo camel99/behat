@@ -330,6 +330,8 @@ oblekaj PS1 funkcje pokazujacą brancha
 => git log --oneline origin/master pokazuje zmiany na zdalnym repo
 => git branch -r pokazuje zdalne gałęzie
 => 
+=> 
+
 
 => => => => =>S T A S H=> => => => => => => =>
 
