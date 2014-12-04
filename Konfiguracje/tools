@@ -67,6 +67,28 @@ apachectl start/stop/restart/status
 6. Sprawdzenie czy composer jest OK
 . sprawdzanie czy Apache jest odpalony : systemctl is-active httpd.service
 7. sprawdzenie dokłądniejsze działania Apacha systemctl status httpd.service
+
+=> var_export
+=> trigger_error
+=> property_exists
+=> tablice: uzywaj <pre> </php print_r(nazwa_tablicy)?></pre> do lepszego wyświeltenia danych
+=> funkcja zwraca tylko jedna wartość więc, jeśli chcesz zwrócic więcej wartości to wrzuć je do tablicy: czyli return x; return y; jest błedne! trzeba zrobić return array(x,y);
+=> używaj list
+=> $methods=  get_class_methods('nazwa_klasy');)-> zwraca metody klasy w postatci tablicy
+=> $classes=  get_declared_classes();-> zwraca zadeklarowane klasy, moje plus wbudowane
+=> method_exists('nazwa_klasy','nazwa_metody') -> sprawdza czy istnieje metoda wew klasy=> $czyJestMetoda=method_exists('Person', 'say_hello')?  "metoda istnieje": "brak takiej metody";
+=> get_class('nazwa_obiektu_klasy')-> zwraca nazwe klasy, której jest biekt
+=> is_a('nazwa_obiektu','nazwa_klasy') -> sprwadza czy obiekt, jest obiektem danej klasy => $obiektKlasy=is_a($person, 'Person')?"jestem obiektem klasy Person":"nie jestem obiektem klasy Person";
+=> $this -> słuzy do wywoływania metod, var, ale tylko wewnątrz klasy, czyli $this to niezainicjowany jeszcze obiekt klasy
+=> get_class_vars('Nazwa_klasy') -> zwraca atrybuty klasy
+=> STATYCZNE zmienne:=> echo nazwa_klasy (lub self):: Nazwa_atrybutu np. klasa Person, atrybut static $totalStudents=0, echo Person:: $totalStudents
+=> w statycznych funkcjach nie można używać $this odwołując się do var typu "static". Statyczne metody wołają tylko statyczne zmienne!
+=> słowo kluczowe "parent" uzywamy gdy przy dziedziczeniu dana klasa potomna chce sie odwołać do metod klasy po której dziedziczy
+=> 
+=> 
+
+
+
 ##################################################################
 
 			INTELI J IDEA
@@ -85,6 +107,20 @@ http://tutorialforlinux.com/2014/01/03/how-to-install-intellij-idea-13-on-fedora
 http://docs.behat.org/en/v2.5/quick_intro.html#installation
 
 => bin/behat --name Nazwa_tagu ----dry-run --append-snippets -> dodaje funkcje do feature 
+=> zamiast ciagle uzywać kroku z logowaniem można napisac funkcje i potem pisac już: 
+GIVEN I am logged in "homepage" lub użyć BACKGROUND
+=> używanie tagów do grupowania feature i scenario
+=> SCENARIO OUTLINES
+zamiast pisać kilka razy to samo można użyć scenario outline:
+Scenario Outline: Eating
+Given there are <start> cucumbers
+When I eat <eat> cucumbers
+Then I should have <left> cucumbers
+EXAMPLES:
+| start | eat | left 
+| 12    | 5   | 7
+| 20    | 5   | 15
+wszystko pomiędzy < > jest traktowane jako placeholder (jako zmienna) i jest zastępowane danymi z sekcji EXAMPLES (poza 1 wierszem)
 
 ##############################################################
 			LINUX
@@ -166,6 +202,7 @@ V. GIT
 http://git-scm.com/docs/git-stash
 http://readwrite.com/2013/10/02/github-for-beginners-part-2
 http://alblue.bandlem.com/Tag/git/
+http://longair.net/blog/2009/04/16/git-fetch-and-merge/ fajny o pull i fetch
 
 1.INSTALACJA
 
@@ -291,6 +328,7 @@ oblekaj PS1 funkcje pokazujacą brancha
 => git branch -r pokazuje zdalne gałęzie
 => git branch -a pokazuje wszystkie gałęzie
 => git log --oneline origin/master pokazuje zmiany na zdalnym repo
+=> git branch -r pokazuje zdalne gałęzie
 
 => => => => =>S T A S H=> => => => => => => =>
 
