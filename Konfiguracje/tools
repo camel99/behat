@@ -246,6 +246,7 @@ yum install git-core gitweb
 => git fetch [nazwa zdalengo repo] pobieranie danych z repozytorium
 => git fetch origin pobierze każdą nową pracę jaka została wypchnięta 			    na oryginalny serwer od momentu sklonowania go przez ciebie
 => git pull automatycznie popbiera i merguje  dane z lokalnymi plikami
+=> git config --global credential.helper cache ->>>>>> aby nie trzeba było podawac hasła przy pushu
 
 =>=>=>=>=>=>=>=>=>CLONING GIT directory=>=>=>=>=>=>=>=>=>
 => git remote -> sprawdza skonfigurowanie serwery
