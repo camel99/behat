@@ -121,6 +121,7 @@ EXAMPLES:
 | 12    | 5   | 7
 | 20    | 5   | 15
 wszystko pomiędzy < > jest traktowane jako placeholder (jako zmienna) i jest zastępowane danymi z sekcji EXAMPLES (poza 1 wierszem)
+<<<<<<< HEAD
 => Używaj table. Nie myl ich ze SCENARIO OUTLINE
 => tagi oddziela się spacjami @tag1 @tag2 @tag3
 => komentarz we feature musi miec format :
@@ -368,6 +369,7 @@ you could do that with:  git diff master origin/master
 How about the other way round? Suppose you’ve made some changes to the branch “experimental” 
 and want to push that to a remote repository called “origin”. This should be as simple as:  git push origin experimental
 6.
+
 
 => => => => =>S T A S H=> => => => => => => =>
 
