@@ -369,6 +369,21 @@ you could do that with:  git diff master origin/master
 5. Pushing your changes to a remote repository
 How about the other way round? Suppose you’ve made some changes to the branch “experimental” 
 and want to push that to a remote repository called “origin”. This should be as simple as:  git push origin experimental
+=>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+To set up a local branch with a different name than the remote branch, you can easily use the first version with a different local branch name:
+
+$ git checkout -b sf origin/serverfix
+Branch sf set up to track remote branch serverfix from origin.
+Switched to a new branch 'sf'
+
+Now, your local branch sf will automatically pull from origin/serverfix.
+
+If you already have a local branch and want to set it to a remote branch
+you just pulled down, or want to change the upstream branch you’re tracking, 
+you can use the -u or --set-upstream-to option to git branch to explicitly set it at any time.
+
+$ git branch -u origin/serverfix
+Branch serverfix set up to track remote branch serverfix from origin.
 
 =>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>
 FLOW w PRACY
