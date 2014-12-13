@@ -368,7 +368,16 @@ you could do that with:  git diff master origin/master
 5. Pushing your changes to a remote repository
 How about the other way round? Suppose you’ve made some changes to the branch “experimental” 
 and want to push that to a remote repository called “origin”. This should be as simple as:  git push origin experimental
-6.
+
+=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>
+FLOW w PRACY
+
+1. Chlopacy tworza zdalny branch dla historyjki o nazwie NSEST-XX
+2.Do w/w brancha pushuja swoje zmiany na branchach devovskich.
+3.QA robią git checkout --track -b NSEST-XX origin/NSEST-XX tak aby śledzić zdalny branch dla historyjki
+4. Codziennie (kilka razy dziennie robimy lokalnie z tej gałęzi git fetch a potem git merge origin/NSEST-XX (lub zamiast fetch i merge
+robimy git pull)
+5.Z poziomu lokalnego mastera codzinnie (lub kilka razy dziennie) robimy git fetch a potem git merge origin/master (lub git pull)
 
 
 => => => => =>S T A S H=> => => => => => => =>
