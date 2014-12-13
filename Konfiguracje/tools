@@ -356,13 +356,18 @@ zdalna gałęż o nazwie test
 2. stworzenie lokalnej gałęzi na podstawie zdalnej i sledzenie tej zdalnej: git branch -r potem git --track -b test origin/test
 3.aktualizacja gałęzi na podstawie origin: będąc na gałęzi test robimy git fetch origin
 3. Aktualizacja lokalneg mastera:
-git fetch doesn’t touch your working tree at all, so gives you a little breathing space to decide what you want to do next. 
-To actually bring the changes from the remote branch into your working tree, you have to do a git merge. 
-So, for instance, if I’m working on “master” (after a git checkout master) then I can merge in the changes that we’ve just got from origin with:  git merge origin/master
-4.If instead you just wanted to see what the differences are between your branch and the remote one, you could do that with:  git diff master origin/master
+git fetch doesn’t touch your working tree at all, so gives you
+a little breathing space to decide what you want to do next. 
+To actually bring the changes from the remote branch into your working tree,
+you have to do a git merge. 
+So, for instance, if I’m working on “master” (after a git checkout master) then I can merge in the changes 
+that we’ve just got from origin with:  git merge origin/master
+4.If instead you just wanted to see what the differences are between your branch and the remote one, 
+you could do that with:  git diff master origin/master
 5. Pushing your changes to a remote repository
 How about the other way round? Suppose you’ve made some changes to the branch “experimental” 
 and want to push that to a remote repository called “origin”. This should be as simple as:  git push origin experimental
+6.
 
 => => => => =>S T A S H=> => => => => => => =>
 
