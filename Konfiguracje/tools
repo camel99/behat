@@ -353,7 +353,7 @@ you would use the command: git checkout --track -b refactored origin/refactored
 => FLOW
 zdalna gałęż o nazwie test
 1. sprawdzenie zdalnych gałęzi: git fetch
-2. stworzenie lokalnej gałęzi na podstawie zdalnej i sledzenie tej zdalnej: git branch -r potem git --track -b test origin/test
+2. stworzenie lokalnej gałęzi na podstawie zdalnej i sledzenie tej zdalnej: git branch -r potem git checkout --track -b test origin/test
 3.aktualizacja gałęzi na podstawie origin: będąc na gałęzi test robimy git fetch origin
 3. Aktualizacja lokalneg mastera:
 git fetch doesn’t touch your working tree at all, so gives you
