@@ -1,9 +1,3 @@
-#############################################################
-klucz publiczny 
-
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDx7MySi6CMIR1ujQzalEj1uwYk4/IeUVbLGoTOySHMBNwBdv5/Mgy2wIfJW/+JDELhl3sGvABQiyE0c+K6FUhQnYMVRHugoafgLgYizXzI7gywOyGxBb9L8qZnVdvpzThFaXply+KKB+8ezxe6HfZro3y6FJx5Hml7L/DPtt6VZtA9lbJFNkJp7G7Jc+bVSvlOCMlN99kcPX0nWAJa5lxjkArZqgNv2dnRJb1+WLguZlIrcFD2ubPhoZ5HfjE4demUucSbW3PCxEefY0INaab6u5tAanowv9tszcORfA7dUuU7fqeDTZc5bEGp3AuqGVpZK4d0hb/dbWFqbo6SV44d root@Camel-FEDORA
-####################################################################
-
 ###################################
 JENKINS
 Based on :
@@ -85,9 +79,6 @@ apachectl start/stop/restart/status
 => w statycznych funkcjach nie można używać $this odwołując się do var typu "static". Statyczne metody wołają tylko statyczne zmienne!
 => słowo kluczowe "parent" uzywamy gdy przy dziedziczeniu dana klasa potomna chce sie odwołać do metod klasy po której dziedziczy
 => 
-=> 
-
-
 
 ##################################################################
 
@@ -135,12 +126,6 @@ wszystko pomiędzy < > jest traktowane jako placeholder (jako zmienna) i jest za
 
 1. Sprawdzenie aktywnych procesów.
 systemctl list-units --type=service
-
-﻿Klucz publiczny 
-
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDx7MySi6CMIR1ujQzalEj1uwYk4/IeUVbLGoTOySHMBNwBdv5/Mgy2wIfJW/+JDELhl3sGvABQiyE0c+K6FUhQnYMVRHugoafgLgYizXzI7gywOyGxBb9L8qZnVdvpzThFaXply+KKB+8ezxe6HfZro3y6FJx5Hml7L/DPtt6VZtA9lbJFNkJp7G7Jc+bVSvlOCMlN99kcPX0nWAJa5lxjkArZqgNv2dnRJb1+WLguZlIrcFD2ubPhoZ5HfjE4demUucSbW3PCxEefY0INaab6u5tAanowv9tszcORfA7dUuU7fqeDTZc5bEGp3AuqGVpZK4d0hb/dbWFqbo6SV44d root@Camel-FEDORA
-
-
 I. JENKINS
 
 Based on:
