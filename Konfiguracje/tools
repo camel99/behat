@@ -368,7 +368,7 @@ you could do that with:  git diff master origin/master
 5. Pushing your changes to a remote repository
 How about the other way round? Suppose you’ve made some changes to the branch “experimental” 
 and want to push that to a remote repository called “origin”. This should be as simple as:  git push origin experimental
-
+6.Wpis zdalny bedzie konflikt, ma pokazac tylko ze ważne jest robienie git fetch przed git push.
 =>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>
 FLOW w PRACY
 
@@ -378,6 +378,13 @@ FLOW w PRACY
 4. Codziennie (kilka razy dziennie robimy lokalnie z tej gałęzi git fetch a potem git merge origin/NSEST-XX (lub zamiast fetch i merge
 robimy git pull)
 5.Z poziomu lokalnego mastera codzinnie (lub kilka razy dziennie) robimy git fetch a potem git merge origin/master (lub git pull)
+6. Jak robimy na masterze git fetch to powinno sie pojawic: Unpacking objects: 100% (4/4), done.
+From https://github.com/camel99/behat
+   bab6d4f..a9fbd86  master     -> origin/master
+wtedy mozna sprawdzic git show a9fbd86 co przyszlo ze zdalnego mastera. Jesli bedzie OK wtedy
+robimy git merge origin/master tak aby miec swiezego mastera (lub git pull)
+7.Wypychanie zmian: będąc na branchu NSEST-XX robimy git fetch a potem git push origin (jesli z jakiegos powodu 
+nasz lokalny branch ma inną nazwę niż zdalny to robimy git push origin HEAD:nazwa_zdalnego_brancha
 
 
 => => => => =>S T A S H=> => => => => => => =>
