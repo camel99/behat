@@ -342,6 +342,7 @@ oblekaj PS1 funkcje pokazujacą brancha
 => git log --oneline origin/master pokazuje zmiany na zdalnym repo
 => git branch -r pokazuje zdalne gałęzie
 => git branch -a
+=> git push origin --delete nazwa_zdalnego_brancha  ->>>>>>>>>> usuwa zdalny branch
 => You mostly do with remote-tracking branches is one of the following:
 
     Update them with git fetch
