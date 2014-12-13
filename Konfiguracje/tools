@@ -367,7 +367,7 @@ you could do that with:  git diff master origin/master
 5. Pushing your changes to a remote repository
 How about the other way round? Suppose you’ve made some changes to the branch “experimental” 
 and want to push that to a remote repository called “origin”. This should be as simple as:  git push origin experimental
-6.Wpis zdalny bedzie konflikt, ma pokazac tylko ze ważne jest robienie git fetch przed git push.
+
 =>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>
 FLOW w PRACY
 
