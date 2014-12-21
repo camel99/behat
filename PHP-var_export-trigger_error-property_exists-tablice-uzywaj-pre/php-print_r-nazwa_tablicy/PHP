@@ -1,0 +1,38 @@
+=> var_export
+=> trigger_error
+=> property_exists
+=> tablice: uzywaj <pre> </php print_r(nazwa_tablicy)?></pre> do lepszego wyświeltenia danych
+=> funkcja zwraca tylko jedna wartość więc, jeśli chcesz zwrócic więcej wartości to wrzuć je do tablicy: czyli return x; return y; jest błedne! trzeba zrobić return array(x,y);
+=> używaj list
+=> $methods=  get_class_methods('nazwa_klasy');)-> zwraca metody klasy w postatci tablicy
+=> $classes=  get_declared_classes();-> zwraca zadeklarowane klasy, moje plus wbudowane
+=> method_exists('nazwa_klasy','nazwa_metody') -> sprawdza czy istnieje metoda wew klasy=> $czyJestMetoda=method_exists('Person', 'say_hello')?  "metoda istnieje": "brak takiej metody";
+=> get_class('nazwa_obiektu_klasy')-> zwraca nazwe klasy, której jest biekt
+=> is_a('nazwa_obiektu','nazwa_klasy') -> sprwadza czy obiekt, jest obiektem danej klasy => $obiektKlasy=is_a($person, 'Person')?"jestem obiektem klasy Person":"nie jestem obiektem klasy Person";
+=> $this -> słuzy do wywoływania metod, var, ale tylko wewnątrz klasy, czyli $this to niezainicjowany jeszcze obiekt klasy
+=> get_class_vars('Nazwa_klasy') -> zwraca atrybuty klasy
+=> STATYCZNE zmienne:=> echo nazwa_klasy (lub self):: Nazwa_atrybutu np. klasa Person, atrybut static $totalStudents=0, echo Person:: $totalStudents
+=> w statycznych funkcjach nie można używać $this odwołując się do var typu "static". Statyczne metody wołają tylko statyczne zmienne!
+=> słowo kluczowe "parent" uzywamy gdy przy dziedziczeniu dana klasa potomna chce sie odwołać do metod klasy po której dziedziczy
+=> $this -> jest to pseudo zmienna. Podaczs psania kodu nie wiemy jak sie bedzie nazywał obiekt, więc aby się odwołać do składowej klasy uzywamy tej zmiennej
+=> Parent ->  operator słuzy do wywołania funkcji z klasy rodzica. Klas B dziedziczy po klasie A, to aby wywołac funkcje "licz()" klasy A robimy w klasie B:"parent:licz(); "
+=> Referencja w PHP 5: w php 4 referencja wyglądała tak: $a=5; $b=&$a; wtedy zmiana wartości zmiennej $b powodowała zmiane tez wartości $a i odwrotnie. w php5 zwykłe przypisanie jest referencją: 
+   $a=10; $b=a; $b=12; powoduję, że zmienna a bedzie miała wartość 12.Aby utworzyc kopie zmiennej, trzeba zrobić: $b=clone($a);
+=> PUBLIC, PRIVATE, PROTECTED -> 
+    public(publiczna) - zmienna lub metoda jest widoczna z całego skryptu
+    protected(chroniona) - zmienna lub metoda jest widoczna tylko z obiektu w którym się znajduje bądź z jego obiektu podrzędnego
+    private(prywatna) - zmienna lub metoda jest widoczna tylko z obiektu w którym się znajduje
+    cons - deklarując stałą nie dajemy na poczatku $, czyli cons premia=12000 a nie cons $premia=12000. odwołujemy sie do niej przez podwójne "::": "echo self::premia"
+=> INTERFEJSY: http://ti.zs2-stargard.edu.pl/kurs_php/oop5.html
+    Klasy mogą dziedziczyć tylko z jednej klasy nadrzędnej. To prowadziło czasami do nadmiernego komplikowania drzewa klas. 
+    Aby temu zapobiec w PHP5 wprowadzono interfejsy, które w rzeczywistości nie mają żadnych metod. 
+    Interfejs to tylko definicja metody i parametrów jakie ona pobiera. Do kalsy można potem zainplementować dowolną liczbę interfejsów,
+    pod warunkiem, że w klasie zostaną zadeklarowane metody z interfejsów. Jeśli nie zostanie zadeklarowana jakaś metoda, wymagana przez zaimplementowany interfejs 
+    wyświetli się fatal error. Aby dołączyć interfejs nalezy sie posłużyć słowemimplements. 
+=> Metody i zmienne statyczne
+    Metody i zmienne statyczne to takie, do których dostęp mozna uzyskać z zewnątrz, bez definiowania obiektu danej klasy.
+    Elementy statyczne definiowane są operatoremstatici dostęp do nich musi być koniecznie publiczny. 
+    Nie mozna też używać$this->jako odniesienia do aktualnej klasy. Zamiast tego uzywajself::. 
+    Zmienne z metody statycznej nie moga być pobierane za pomocą operatora->. Zamiast tego użyj operatoraPaamayim Nekudotayimczyli :: (dwukropka). 
+=>  __set() jest metoda przechwytującą próby zmiany wartości zmiennej w klasie. Ma dwa argumenty, nazwę zmiennej i jej nowa wartość. 
+=>  __get() jest metoda przechwytującą próby uzyskania dostępu do wartości zmiennej. 
