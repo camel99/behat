@@ -374,6 +374,7 @@ Branch serverfix set up to track remote branch serverfix from origin.
 
 =>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>
 FLOW w PRACY
+http://makandracards.com/makandra/527-squash-several-git-commits-into-a-single-commit
 
 1. Chlopacy tworza zdalny branch dla historyjki o nazwie NSEST-XX
 2.Do w/w brancha pushuja swoje zmiany na branchach devovskich.
