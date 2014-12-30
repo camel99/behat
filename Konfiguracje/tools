@@ -233,6 +233,15 @@ yum install git-core gitweb
 => git pull automatycznie popbiera i merguje  dane z lokalnymi plikami
 => git config --global credential.helper cache ->>>>>> aby nie trzeba było podawac hasła przy pushu
 => git remote show origin  
+=> Wyświetlanie nazwy brancha w prompt:
+	http://fedoraproject.org/wiki/Git_quick_reference
+1.To enable this, you can take advantage of the __git_ps1 function, provided by /usr/share/git-core/contrib/completion/git-prompt.sh in the git package. 
+Add this these 4 lines to ~/.bashrc (będąc sudo):
+			export PS1='[\u@\h \W$(declare -F __git_ps1 &>/dev/null && __git_ps1 " (%s)")]\$ '
+			source /usr/share/git-core/contrib/completion/git-prompt.sh
+			export GIT_PS1_SHOWDIRTYSTATE=true
+			export GIT_PS1_SHOWUNTRACKEDFILES=true
+To activate bash configuration changes, run source ~/.bashrc. 
 
 =>=>=>=>=>=>=>=>=>CLONING GIT directory=>=>=>=>=>=>=>=>=>
 => git remote -> sprawdza skonfigurowanie serwery
