@@ -242,6 +242,17 @@ Add this these 4 lines to ~/.bashrc (będąc sudo):
 			export GIT_PS1_SHOWDIRTYSTATE=true
 			export GIT_PS1_SHOWUNTRACKEDFILES=true
 To activate bash configuration changes, run source ~/.bashrc. 
+2. Lepiej do pliku .bashrc dodać:
+    # git auto completion
+    source /etc/bash_completion.d/git
+    # function to display whether there are uncommitted changes or not
+    function parse_git_dirty {
+    [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
+    }
+    #show branch in prompt
+    export PS1='[\u@\h \W]\[\033[31m\]$(__git_ps1 "(%s$(parse_git_dirty))")\[\033[01;34m\]$\[\033[00m\] '
+
+
 
 =>=>=>=>=>=>=>=>=>CLONING GIT directory=>=>=>=>=>=>=>=>=>
 => git remote -> sprawdza skonfigurowanie serwery
