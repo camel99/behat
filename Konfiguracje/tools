@@ -401,7 +401,7 @@ Oraz inormacja o dostepnych komendach.
 4.Zapisujemy zmiany ":wq"
 5.Powinien otworzyc sie edytor, w ktorym mozna zmienić nazwy dla commitów
 6.WAŻNE nie używaj squash dla push'niętych juz commitów!!!Please do not squash commits that are already part of an open pull-request.
-
+7.Używając gitk można łatwo przejrzec co zawiera commit
 => => => => =>S T A S H=> => => => => => => =>
 
 => git stash save "zachowaj na pozniej"
