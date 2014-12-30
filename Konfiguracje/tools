@@ -389,6 +389,7 @@ robimy git merge origin/master tak aby miec swiezego mastera (lub git pull)
 7.Wypychanie zmian: będąc na branchu NSEST-XX robimy git fetch a potem git push origin (jesli z jakiegos powodu 
 nasz lokalny branch ma inną nazwę niż zdalny to robimy git push origin HEAD:nazwa_zdalnego_brancha
 8.git remote show origin pokazuje konfiguracje lsedzenia/pushowania
+9. Pushowanie wielu commitów
 
 => => => => =>S T A S H=> => => => => => => =>
 
