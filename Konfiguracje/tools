@@ -391,6 +391,7 @@ nasz lokalny branch ma inną nazwę niż zdalny to robimy git push origin HEAD:n
 8.git remote show origin pokazuje konfiguracje lsedzenia/pushowania
 9. Pushowanie wielu commitów: robimy git merge --squash (working branch name) a potem git commit
 10.
+11.
 
 => => => => =>S T A S H=> => => => => => => =>
 
