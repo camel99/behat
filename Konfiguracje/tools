@@ -243,6 +243,9 @@ Add this these 4 lines to ~/.bashrc (będąc sudo):
 			export GIT_PS1_SHOWUNTRACKEDFILES=true
 To activate bash configuration changes, run source ~/.bashrc. 
 2. Lepiej do pliku .bashrc dodać:
+	source /usr/share/git-core/contrib/completion/git-prompt.sh
+	export GIT_PS1_SHOWDIRTYSTATE=true
+	export GIT_PS1_SHOWUNTRACKEDFILES=true
     # git auto completion
     source /etc/bash_completion.d/git
     # function to display whether there are uncommitted changes or not
