@@ -356,6 +356,7 @@ you could do that with:  git diff master origin/master
 5. Pushing your changes to a remote repository
 How about the other way round? Suppose you’ve made some changes to the branch “experimental” 
 and want to push that to a remote repository called “origin”. This should be as simple as:  git push origin experimental
+<<<<<<< Updated upstream
 =>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 To set up a local branch with a different name than the remote branch, you can easily use the first version with a different local branch name:
 
@@ -403,6 +404,7 @@ Oraz inormacja o dostepnych komendach.
 5.Powinien otworzyc sie edytor, w ktorym mozna zmienić nazwy dla commitów
 6.WAŻNE nie używaj squash dla push'niętych juz commitów!!!Please do not squash commits that are already part of an open pull-request.
 7.Używając gitk można łatwo przejrzec co zawiera commit
+
 => => => => =>S T A S H=> => => => => => => =>
 
 => git stash save "zachowaj na pozniej"
