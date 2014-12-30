@@ -356,8 +356,6 @@ you could do that with:  git diff master origin/master
 5. Pushing your changes to a remote repository
 How about the other way round? Suppose you’ve made some changes to the branch “experimental” 
 and want to push that to a remote repository called “origin”. This should be as simple as:  git push origin experimental
-<<<<<<< Updated upstream
-=>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 To set up a local branch with a different name than the remote branch, you can easily use the first version with a different local branch name:
 
 $ git checkout -b sf origin/serverfix
@@ -375,6 +373,7 @@ Branch serverfix set up to track remote branch serverfix from origin.
 
 =>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>
 FLOW w PRACY
+http://push.cwcon.org/learn/squashing-commits.html
 http://makandracards.com/makandra/527-squash-several-git-commits-into-a-single-commit
 
 1. Chlopacy tworza zdalny branch dla historyjki o nazwie NSEST-XX
