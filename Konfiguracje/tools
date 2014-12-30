@@ -389,10 +389,19 @@ robimy git merge origin/master tak aby miec swiezego mastera (lub git pull)
 7.Wypychanie zmian: będąc na branchu NSEST-XX robimy git fetch a potem git push origin (jesli z jakiegos powodu 
 nasz lokalny branch ma inną nazwę niż zdalny to robimy git push origin HEAD:nazwa_zdalnego_brancha
 8.git remote show origin pokazuje konfiguracje lsedzenia/pushowania
-9. Pushowanie wielu commitów: robimy git merge --squash (working branch name) a potem git commit
-10.
-11.
-
+=>=>=> MERGOWANIE COMMITÓW =>=>=>=>=>=>=>=>=>
+1.Mergowanie wielu commitów: robimy git rebase -i HEAD~x gdzie x oznacza liczbe commitów które chcemy zmergowac w jeden, np x=4.
+2.powinien otworzyc sie edytor z wpisami podobnymi do tych:
+pick 8ca46ba Initial draft of article
+pick 74abb12 Reworking introductory paragraphs
+pick 02221a7 Changes to match the Push style guide
+pick ddef6dd Completed article for submission to Push
+Oraz inormacja o dostepnych komendach.
+3.Pierwszego picka zostawiamy a pozostałe zmieniamy w "squash"
+4.Zapisujemy zmiany ":wq"
+5.Powinien otworzyc sie edytor, w ktorym mozna zmienić nazwy dla commitów
+6.WAŻNE nie używaj squash dla push'niętych juz commitów!!!Please do not squash commits that are already part of an open pull-request.
+7.Używając gitk można łatwo przejrzec co zawiera commit
 => => => => =>S T A S H=> => => => => => => =>
 
 => git stash save "zachowaj na pozniej"
