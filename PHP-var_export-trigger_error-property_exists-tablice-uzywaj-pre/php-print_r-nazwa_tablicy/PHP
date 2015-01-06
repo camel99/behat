@@ -36,3 +36,6 @@
     Zmienne z metody statycznej nie moga być pobierane za pomocą operatora->. Zamiast tego użyj operatoraPaamayim Nekudotayimczyli :: (dwukropka). 
 =>  __set() jest metoda przechwytującą próby zmiany wartości zmiennej w klasie. Ma dwa argumenty, nazwę zmiennej i jej nowa wartość. 
 =>  __get() jest metoda przechwytującą próby uzyskania dostępu do wartości zmiennej. 
+=> is_a(), which we use to find out if a particular object is an instance of a given class; 
+=> property_exists(), to see if an object has a given property; 
+=> and method_exists(), to see if an object has a given method.
