@@ -413,6 +413,12 @@ robimy git merge origin/master tak aby miec swiezego mastera (lub git pull)
 7.Wypychanie zmian: będąc na branchu NSEST-XX robimy git fetch a potem git push origin (jesli z jakiegos powodu 
 nasz lokalny branch ma inną nazwę niż zdalny to robimy git push origin HEAD:nazwa_zdalnego_brancha
 8.git remote show origin pokazuje konfiguracje lsedzenia/pushowania
+
+NOWE
+1. raz trzeba wykonać: git config branch.autosetupmerge true
+2. chcąc trakować zdalnego brancha wysrtarczy zrobić: git checkout -tb feature/NSESS-71-for-QA , czyli podając nazwe zdalnego brancha bez "origin"
+3.
+
 =>=>=> MERGOWANIE COMMITÓW =>=>=>=>=>=>=>=>=>
 1.Mergowanie wielu commitów: robimy git rebase -i HEAD~x gdzie x oznacza liczbe commitów które chcemy zmergowac w jeden, np x=4.
 2.powinien otworzyc sie edytor z wpisami podobnymi do tych:
@@ -601,6 +607,23 @@ sudo yum install kdiff3
 
 git config --global merge.tool kdiff3
 git config --global diff.tool kdiff3
+
+
+12. PHP CodeSniffer
+http://pear.php.net/package/PHP_CodeSniffer/download/1.5.6
+http://pear.php.net/manual/en/package.php.php-codesniffer.advanced-usage.php
+
+a.pear uninstall PHP_CodeSniffer
+b.pear install PHP_CodeSniffer-1.5.6 -- wyzsza wersja nie działa u mnie
+c. polecenia:
+i.$ phpcs -n /path/to/code/myfile.php
+ii. $ phpcs --report=summary /path/to/code
+iii.$ phpcs -n --report=summary /path/to/code
+iv.$ phpcs /path/to/code/CodeSniffer -v
+v.$ phpcs -i
+vi.$ phpcs -s /path/to/code/myfile.php
+vii.$ phpcs -a /path/to/code
+
 
 
 
