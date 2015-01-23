@@ -414,10 +414,6 @@ robimy git merge origin/master tak aby miec swiezego mastera (lub git pull)
 nasz lokalny branch ma inną nazwę niż zdalny to robimy git push origin HEAD:nazwa_zdalnego_brancha
 8.git remote show origin pokazuje konfiguracje lsedzenia/pushowania
 
-NOWE
-1. raz trzeba wykonać: git config branch.autosetupmerge true
-2. chcąc trakować zdalnego brancha wysrtarczy zrobić: git checkout -tb feature/NSESS-71-for-QA , czyli podając nazwe zdalnego brancha bez "origin"
-3.
 
 =>=>=> MERGOWANIE COMMITÓW =>=>=>=>=>=>=>=>=>
 1.Mergowanie wielu commitów: robimy git rebase -i HEAD~x gdzie x oznacza liczbe commitów które chcemy zmergowac w jeden, np x=4.
