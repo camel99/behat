@@ -18,7 +18,7 @@ c. Dodać pluginy:
 - GitHub API PLugin
 - GIT client plugin
 - GIT Plugin
-- 
+- oraz te :https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin z dependencies
 
 6. IMPORTANT links:
 https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+RedHat+distributions
