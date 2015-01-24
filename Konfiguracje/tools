@@ -2,8 +2,8 @@
 JENKINS
 Based on :
 https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+RedHat+distributions
-
-###################################
+https://www.youtube.com/watch?v=RR0LabeUQ88 -> konfiguracja
+http://stackoverflow.com/questions/8639501/jenkins-could-not-run-git
 1. Pobrać plik z http://pkg.jenkins-ci.org/redhat/
 2. Z prawami roota instalujemy Jenkins : sudo yum install jenkins
 3.START/STOP/RESTART - sudo service jenkins start/stop/restart
