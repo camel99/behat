@@ -1,5 +1,4 @@
-###################################
-JENKINS
+I. JENKINS
 Based on :
 https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+RedHat+distributions
 https://www.youtube.com/watch?v=RR0LabeUQ88 -> konfiguracja
@@ -19,15 +18,12 @@ c. Dodać pluginy:
 - GIT client plugin
 - GIT Plugin
 - oraz te :https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin z dependencies
-
 6. IMPORTANT links:
 https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+RedHat+distributions
 http://pkg.jenkins-ci.org/redhat/
 http://www.infoq.com/articles/Gerrit-jenkins-hudson
 
-#######################################################
-GITHUB
-#######################################################
+II.GITHUB
 1. Zakładamy repo na stronie https://github.com/camel99/php.git
 2. gdzie koncowka php.git oznacza nazwę repozytorium
 3. dodajemy zdalne repo git remote add origin https://github.com/camel99/php.git
@@ -39,11 +35,7 @@ GITHUB
 4.dodawanie zdlanego repo: git remote origin https://github.com/camel99/php.git
 5.wypychanie zmian do zdlanego repo : git push origin master
 
-##################################################################
-
-			PHP, GIT, APACHE, 
-
-################################################################
+III. PHP, GIT, APACHE, 
 1. INSTALACJA PHP, phpMyAdmin, oraz git
 https://ask.fedoraproject.org/en/question/53827/howto-install-laravel-and-apache-on-fedora/
 
@@ -78,23 +70,13 @@ apachectl start/stop/restart/status
 => STATYCZNE zmienne:=> echo nazwa_klasy (lub self):: Nazwa_atrybutu np. klasa Person, atrybut static $totalStudents=0, echo Person:: $totalStudents
 => w statycznych funkcjach nie można używać $this odwołując się do var typu "static". Statyczne metody wołają tylko statyczne zmienne!
 => słowo kluczowe "parent" uzywamy gdy przy dziedziczeniu dana klasa potomna chce sie odwołać do metod klasy po której dziedziczy
-=> 
 
-##################################################################
-
-			INTELI J IDEA
-
-################################################################
+IV. INTELI J IDEA
 http://tutorialforlinux.com/2014/01/03/how-to-install-intellij-idea-13-on-fedora-20-3264bit-linux-easy-guide/
 1. Pobrac plik z https://www.jetbrains.com/idea/download/download_thanks.jsp
 2.Dwuklik na pliku
-##################################################################
 
-			BEHAT
-
-################################################################
-
-
+V. BEHAT
 http://docs.behat.org/en/v2.5/quick_intro.html#installation
 
 => bin/behat --name Nazwa_tagu ----dry-run --append-snippets -> dodaje funkcje do feature 
@@ -120,54 +102,11 @@ wszystko pomiędzy < > jest traktowane jako placeholder (jako zmienna) i jest za
 * @When I do something with :methodargument
 */
 
-##############################################################
-			LINUX
-###############################################################
-
+VI. LINUX
 1. Sprawdzenie aktywnych procesów.
 systemctl list-units --type=service
-I. JENKINS
 
-Based on:
-https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+RedHat+distributions
-
-1. Pobrać plik z http://pkg.jenkins-ci.org/redhat/
-2. Z prawami roota instalujemy Jenkins : sudo yum install jenkins
-3. START/STOP/RESTART - sudo service jenkins start/stop/restart
-4. Z poziomu przeglądarki : localhost:8080
-5. Konfiguracja współpracy Jenkinsa z GIT i GERRIT
-a. z poziomu przeglądarki localhost:8080.
-b. zarządzaj dodatkami
-c. Dodać pluginy:
-	- SCM API Plugin
-	- Gerrit Trigger
-	- GITHub Plugin
-	- GitHub API PLugin
-	- GIT client plugin
-	- GIT Plugin
-
-6. IMPORTANT links:
-
-https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+RedHat+distributions
-http://pkg.jenkins-ci.org/redhat/
-http://www.infoq.com/articles/Gerrit-jenkins-hudson
-http://www.infoq.com/articles/Gerrit-jenkins-hudson
-
-II. GITHUB
-
-1. Zakładamy repo na stronie https://github.com/camel99/php.git
-2. gdzie końcówka php.git oznacza nazwę repozytorium
-3. dodajemy zdalne repo git remote add origin https://github.com/camel99/php.git
-4. sprawdzamy dane o repo git remote -v i sprawdzamy czy są dane do fetch i pull
-5.możemy zrobić fetcha z repo jako hit fetch, jeśli nie zadziała robimy najpierw pull'a: git pull
-6. robimy pusha do repo git push
-2.moje repo 'php' ma skrót 'maciej', czyli zamiast git fetch https://github.com/camel99/php.git moge zrobic git fetch maciej.
-3.git remote -v sprawdza nazwę repo
-4.dodawanie zdalnego repo: git remote origin https://github.com/camel99/php.git
-5.wypychanie zmian do zdalnego repo : git push origin master
-
-III.PHP
-
+VII.PHP
 1. sprawdzanie czy serwer jest odpalony : systemctl is-active httpd.service
 2. sprawdzenie dokładniejsze systemctl status httpd.service
 
@@ -185,19 +124,13 @@ $ curl -sS https://getcomposer.org/installer | php
 6. sprawdzanie czy Apache jest odpalony : systemctl is-active httpd.service
 7. sprawdzenie dokłądniejsze działania Apacha systemctl status httpd.service
 
-IV. LINUX
-
-1. Sprawdzenie aktywnych procesów.
-systemctl list-units –type=service
-
-V. GIT
+VIII. GIT
 http://git-scm.com/docs/git-stash
 http://readwrite.com/2013/10/02/github-for-beginners-part-2
 http://alblue.bandlem.com/Tag/git/
 http://longair.net/blog/2009/04/16/git-fetch-and-merge/ fajny o pull i fetch
 
 1.INSTALACJA
-
 yum install curl-devel 
 yum install expat-devel 
 yum install gettext-devel 
@@ -209,7 +142,6 @@ yum install git-core gitweb
 => logout wylogowanie
 => su root potem haslo - zmiana uzytkownika
 => cat ~/.gitconfig
-
 => Creating GIT repository => => => 
 => mkdir project
 => cd project
@@ -229,11 +161,12 @@ yum install git-core gitweb
 => git remote -v wyswietla dodatkowo zapamietany skrót
 => git remote add [skrót] [url] dodawanie zdalnego repozytorium
 => git fetch [nazwa zdalengo repo] pobieranie danych z repozytorium
-=> git fetch origin pobierze każdą nową pracę jaka została wypchnięta 			    na oryginalny serwer od momentu sklonowania go przez ciebie
+=> git fetch origin pobierze każdą nową pracę jaka została wypchnięta na oryginalny serwer od momentu sklonowania go przez ciebie
 => git pull automatycznie popbiera i merguje  dane z lokalnymi plikami
 => git config --global credential.helper cache ->>>>>> aby nie trzeba było podawac hasła przy pushu
 => git remote show origin  
-=> Wyświetlanie nazwy brancha w prompt:
+
+3. Wyświetlanie nazwy brancha w prompt:
 	http://fedoraproject.org/wiki/Git_quick_reference
 1.To enable this, you can take advantage of the __git_ps1 function, provided by /usr/share/git-core/contrib/completion/git-prompt.sh in the git package. 
 Add this these 4 lines to ~/.bashrc (będąc sudo):
@@ -254,53 +187,43 @@ To activate bash configuration changes, run source ~/.bashrc.
     }
     #show branch in prompt
     export PS1='[\u@\h \W]\[\033[31m\]$(__git_ps1 "(%s$(parse_git_dirty))")\[\033[01;34m\]$\[\033[00m\] '
-
-
-
-=>=>=>=>=>=>=>=>=>CLONING GIT directory=>=>=>=>=>=>=>=>=>
+	
+3. CLONING GIT directory
 => git remote -> sprawdza skonfigurowanie serwery
 => git remote -v -> sprawdza skonfigurowanie serwery+nazwa skrótu
 # Clone using git protocol
 => git clone git://github.com/drupal/drupal.git
-
 # Clone using http protocol
 => git clone http://github.com/drupal/drupal.git
-
 # Git protocol is more efficient for cloning. But in the end you will get same thing.
-
 => git remote add [skrót] [url] -. dodawania zdalnego repozytorium
 => git fetch [nazwa-zdalengo-repozytorium] -> pobieranie danych z repozytorium
 
-=>=>=>=>=>=>=>=>=>ZMIANY W PLIKU=>=>=>=>=>=>=>=>=> 
-=> git checkout --nazawaPliku -> cofa zmiany w pliku
-=> git reset HEAD --nazwaPliku ->usuwanie pliku z poczekalni
-
-
-
+4. ZMIANY W PLIKU
+=> git checkout --nazawaPliku - cofa zmiany w pliku
+=> git reset HEAD --nazwaPliku -usuwanie pliku z poczekalni
 => git push [nazwa-zdalnego-repo] [nazwa-gałęzi]
-git remote show [nazwa-zdalnego-repo] -> Inspekcja zmian w repozytorium
-=> git remote rename staraNazwa NowaNazwa -> zmiana nazwy repo zdalnego
-
-alt+F2 gnome-terminal =>>>>>> otwieranie nowego terminala
+git remote show [nazwa-zdalnego-repo] - Inspekcja zmian w repozytorium
+=> git remote rename staraNazwa NowaNazwa - zmiana nazwy repo zdalnego
+alt+F2 gnome-terminal - otwieranie nowego terminala
 => citool - yum install git-gui a potem juz tylko git citool
-=> git fetch origin -> pobierze każdą nową prace jaka została wypchnieta na oryginalny serwer od momentu sklonowania go przez ciebie (lub ostatniego pobrania zmian).
+=> git fetch origin - pobierze każdą nową prace jaka została wypchnieta na oryginalny serwer od momentu sklonowania go przez ciebie (lub ostatniego pobrania zmian).
 /home/maciej/Dokumenty'
-
 => git diff HEAD
 => git diff --staged
-=> gitk ->>>>>>>> kolorowe http://rogerdudler.github.io/git-guide/
-=> git branch nazwa ->>>>>>>>>>>>tworzenie nowej gałęzi
-=> git checkout nazwa ->>>>>>>>>> wchodzenie na nową gałąź
-=> git checkout -b nazwa ->>>>>>>tworzenie i wchodzenie na nowa gałąź 'nazwa'
+=> gitk -kolorowe http://rogerdudler.github.io/git-guide/
+=> git branch nazwa -tworzenie nowej gałęzi
+=> git checkout nazwa - wchodzenie na nową gałąź
+=> git checkout -b nazwa -tworzenie i wchodzenie na nowa gałąź 'nazwa'
 
-=>=>=>=>=>=>=>=>=> MERGOWANIE=>=>=>=>=>=>=>=>
-1.Nalezy z gałęzi 'testy' przejść na master => git checkout master
-2.Następnie robimy merga gałęzi 'testy' z 'master' => git merge testy
-3. Jeśli gałęź 'tetsy' nie jest juz potrzebna usuwa się ją:=> git branch -d testy, po mergu wskaźnik master wskazuje na migawke wskzaywana przez gałąź master
-4.Aby scalić swoja tesową gałąź z gałęzią master robimy z pozimou tej testowej gałęzi merga=> git merge master
-5. narzędzie graficzne do mergowania=> git mergetool
+5. MERGOWANIE
+a.Nalezy z gałęzi 'testy' przejść na master => git checkout master
+b.Następnie robimy merga gałęzi 'testy' z 'master' => git merge testy
+c. Jeśli gałęź 'tetsy' nie jest juz potrzebna usuwa się ją:=> git branch -d testy, po mergu wskaźnik master wskazuje na migawke wskzaywana przez gałąź master
+d.Aby scalić swoja tesową gałąź z gałęzią master robimy z pozimou tej testowej gałęzi merga=> git merge master
+e. narzędzie graficzne do mergowania=> git mergetool
 
-=>=>=>=>=>=>=>=>=>Tworzenie zdalnego repozytorium=>=>=>=>=>=>=>=>=>
+6. Tworzenie zdalnego repozytorium=>=>=>=>=>=>=>=>=>
 => touch README.md
 => git init
 => git add README.md
@@ -308,7 +231,7 @@ alt+F2 gnome-terminal =>>>>>> otwieranie nowego terminala
 => git remote add origin https://github.com/camel99/konfiguracje.git
 => git push -u origin master
 
-=> => => GIT ignore=> => => => => => => => 
+7. Polecenia różne
 => vim .gitignore i w środku dodac pliki ktore maja byc ignorowane
 => git ls-tree HEAD
 => git ls-tree master <nazwaKatlogu> wyswietla zawartosc katalogu, ekploracja katalogu
@@ -321,21 +244,28 @@ alt+F2 gnome-terminal =>>>>>> otwieranie nowego terminala
 => git log --format=fuller
 => git log --graph
 => git log --oneline --graph --all --decorate
+=> git log --pretty=format:'%Cred%h%Creset %d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit 
 => git show <trzeba podac sha np. z git log --oneline>
 => git config --global alias.logg "log --graph --decorate --oneline --abbrev-commit --all" ->>>> alias
+=> git tag -> wyświetla liste tagów
+=> git tag 1.2 -m"wydanie 1.2" -> taguje zmiane z komunikatem 
+=> git show 1.2 -> show the tag
+=> git checkout <tag_name>  -> przechodzenie na wersje z tag'a
+=> By default the git push command does not transfer tags to remote repositories. 
+   You explicitly have to push the tag with the following command. 
+	# push a tag or branch called tagname
+	git push origin [tagname]
 
-=> => => => =>BRANCHES=> => => => => => => => 
+	# to explicitly push a tag and not a branch 
+	git push origin tag <tagname>
+
+	# push all tags
+	git push --tags 
+
+8. BRANCHES
 http://longair.net/blog/2009/04/16/git-fetch-and-merge/
 https://www.atlassian.com/git/tutorials/syncing/git-fetch
 
-M A S T E R  B R A N C H E 
--------- HEAD ------ HEAD-------- HEAD  -------_ HEAD	------- HEAD
-|commit|=>>> |commit|=>>> |commit|=>>>  |commit|=>>>>>>>|commit|=>>> 
---------     --------     -------- /    --------    \   --------  
-                                    / HEAD          \ mergowanie do mastera
-			NEW BRANCH  /   -------HEAD  \ 
-				    /   |commit|=>>> 
-					--------    
 => git branch
 => git branch nowa tworzy branch
 => ls -la .git/refs/heads  pokazuje branche
@@ -344,7 +274,6 @@ M A S T E R  B R A N C H E
 => git branch –merged pokazuje ktora gałąż jest całkowicie zmergowana
 => git branch –m stara_nazwa nowa_nazwa  zmienia nazwe brancha
 => git merge --abort przerwanie mergowania gdy wystąpia konflikty
-oblekaj PS1 funkcje pokazujacą brancha
 => git branch -r pokazuje zdalne gałęzieq
 => git branch -a pokazuje wszystkie gałęzie
 => git log --oneline origin/master pokazuje zmiany na zdalnym repo
@@ -362,119 +291,100 @@ If you want to create a local branch based on a remote-tracking branch
 (i.e. in order to actually work on it) you can do that with git branch –track or git checkout –track -b, which is similar but it also switches 
 your working tree to the newly created local branch. For example, if you see in git branch -r that there’s a remote-tracking branch called origin/refactored that you want, 
 you would use the command: git checkout --track -b refactored origin/refactored
-=> FLOW
+
+9. FLOW pracy
 zdalna gałęż o nazwie test
-1. sprawdzenie zdalnych gałęzi: git fetch
-2. stworzenie lokalnej gałęzi na podstawie zdalnej i sledzenie tej zdalnej: git branch -r potem git checkout --track -b test origin/test
-3.aktualizacja gałęzi na podstawie origin: będąc na gałęzi test robimy git fetch origin
-3. Aktualizacja lokalneg mastera:
+a. sprawdzenie zdalnych gałęzi: git fetch
+b. stworzenie lokalnej gałęzi na podstawie zdalnej i sledzenie tej zdalnej: git branch -r potem git checkout --track -b test origin/test
+c.aktualizacja gałęzi na podstawie origin: będąc na gałęzi test robimy git fetch origin
+d. Aktualizacja lokalneg mastera:
 git fetch doesn’t touch your working tree at all, so gives you
 a little breathing space to decide what you want to do next. 
 To actually bring the changes from the remote branch into your working tree,
 you have to do a git merge. 
 So, for instance, if I’m working on “master” (after a git checkout master) then I can merge in the changes 
 that we’ve just got from origin with:  git merge origin/master
-4.If instead you just wanted to see what the differences are between your branch and the remote one, 
+e.If instead you just wanted to see what the differences are between your branch and the remote one, 
 you could do that with:  git diff master origin/master
-5. Pushing your changes to a remote repository
+f. Pushing your changes to a remote repository
 How about the other way round? Suppose you’ve made some changes to the branch “experimental” 
 and want to push that to a remote repository called “origin”. This should be as simple as:  git push origin experimental
 To set up a local branch with a different name than the remote branch, you can easily use the first version with a different local branch name:
-
 $ git checkout -b sf origin/serverfix
 Branch sf set up to track remote branch serverfix from origin.
-Switched to a new branch 'sf'
-
-Now, your local branch sf will automatically pull from origin/serverfix.
-
+Switched to a new branch 'sf'.Now, your local branch sf will automatically pull from origin/serverfix.
 If you already have a local branch and want to set it to a remote branch
 you just pulled down, or want to change the upstream branch you’re tracking, 
 you can use the -u or --set-upstream-to option to git branch to explicitly set it at any time.
-
 $ git branch -u origin/serverfix
 Branch serverfix set up to track remote branch serverfix from origin.
 
-=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>
-FLOW w PRACY
+10.FLOW w PRACY
 http://push.cwcon.org/learn/squashing-commits.html
 http://makandracards.com/makandra/527-squash-several-git-commits-into-a-single-commit
 
-1. Chlopacy tworza zdalny branch dla historyjki o nazwie NSEST-XX
-2.Do w/w brancha pushuja swoje zmiany na branchach devovskich.
-3.QA robią git checkout --track -b NSEST-XX origin/NSEST-XX tak aby śledzić zdalny branch dla historyjki
-4. Codziennie (kilka razy dziennie robimy lokalnie z tej gałęzi git fetch a potem git merge origin/NSEST-XX (lub zamiast fetch i merge
-robimy git pull)
-5.Z poziomu lokalnego mastera codzinnie (lub kilka razy dziennie) robimy git fetch a potem git merge origin/master (lub git pull)
-6. Jak robimy na masterze git fetch to powinno sie pojawic: Unpacking objects: 100% (4/4), done.
-From https://github.com/camel99/behat
+a. Chlopacy tworza zdalny branch dla historyjki o nazwie NSEST-XX
+b. Do w/w brancha pushuja swoje zmiany na branchach devovskich.
+c. QA robią git checkout --track -b NSEST-XX origin/NSEST-XX tak aby śledzić zdalny branch dla historyjki
+d. Codziennie (kilka razy dziennie robimy lokalnie z tej gałęzi git fetch a potem git merge origin/NSEST-XX (lub zamiast fetch i merge
+   robimy git pull)
+e. Z poziomu lokalnego mastera codzinnie (lub kilka razy dziennie) robimy git fetch a potem git merge origin/master (lub git pull)
+f. Jak robimy na masterze git fetch to powinno sie pojawic: Unpacking objects: 100% (4/4), done.
+   From https://github.com/camel99/behat
    bab6d4f..a9fbd86  master     -> origin/master
-wtedy mozna sprawdzic git show a9fbd86 co przyszlo ze zdalnego mastera. Jesli bedzie OK wtedy
-robimy git merge origin/master tak aby miec swiezego mastera (lub git pull)
-7.Wypychanie zmian: będąc na branchu NSEST-XX robimy git fetch a potem git push origin (jesli z jakiegos powodu 
-nasz lokalny branch ma inną nazwę niż zdalny to robimy git push origin HEAD:nazwa_zdalnego_brancha
-8.git remote show origin pokazuje konfiguracje lsedzenia/pushowania
+   wtedy mozna sprawdzic git show a9fbd86 co przyszlo ze zdalnego mastera. Jesli bedzie OK wtedy
+   robimy git merge origin/master tak aby miec swiezego mastera (lub git pull)
+g. Wypychanie zmian: będąc na branchu NSEST-XX robimy git fetch a potem git push origin (jesli z jakiegos powodu 
+   nasz lokalny branch ma inną nazwę niż zdalny to robimy git push origin HEAD:nazwa_zdalnego_brancha
+h. git remote show origin pokazuje konfiguracje śledzenia/pushowania
 
+11. MERGOWANIE COMMITÓW 
+a. Mergowanie wielu commitów: robimy git rebase -i HEAD~x gdzie x oznacza liczbe commitów które chcemy zmergowac w jeden, np x=4.
+b. powinien otworzyc sie edytor z wpisami podobnymi do tych:
+	pick 8ca46ba Initial draft of article
+	pick 74abb12 Reworking introductory paragraphs
+	pick 02221a7 Changes to match the Push style guide
+	pick ddef6dd Completed article for submission to Push
+	Oraz informacja o dostepnych komendach.
+c. Pierwszego picka zostawiamy a pozostałe zmieniamy w "squash"
+d. Zapisujemy zmiany ":wq"
+e. Powinien otworzyc sie edytor, w ktorym mozna zmienić nazwy dla commitów
+f. WAŻNE nie używaj squash dla push'niętych juz commitów!!!Please do not squash commits that are already part of an open pull-request.
+g. Używając gitk można łatwo przejrzec co zawiera commit
 
-=>=>=> MERGOWANIE COMMITÓW =>=>=>=>=>=>=>=>=>
-1.Mergowanie wielu commitów: robimy git rebase -i HEAD~x gdzie x oznacza liczbe commitów które chcemy zmergowac w jeden, np x=4.
-2.powinien otworzyc sie edytor z wpisami podobnymi do tych:
-pick 8ca46ba Initial draft of article
-pick 74abb12 Reworking introductory paragraphs
-pick 02221a7 Changes to match the Push style guide
-pick ddef6dd Completed article for submission to Push
-Oraz inormacja o dostepnych komendach.
-3.Pierwszego picka zostawiamy a pozostałe zmieniamy w "squash"
-4.Zapisujemy zmiany ":wq"
-5.Powinien otworzyc sie edytor, w ktorym mozna zmienić nazwy dla commitów
-6.WAŻNE nie używaj squash dla push'niętych juz commitów!!!Please do not squash commits that are already part of an open pull-request.
-7.Używając gitk można łatwo przejrzec co zawiera commit
-
-=> => => => =>S T A S H=> => => => => => => =>
+12. STASH
 
 => git stash save "zachowaj na pozniej"
 => git stash list ->>> lista zestashowanych
 => git stash show -p pokazuje co zawiera stash
            
-=>=>=>=>=>=>=>=>=>BEHAT=>=>=>=>=>=>=>=>=>
+IX. BEHAT and MINK
 
 bin/behat --dry-run --append-snippets
 bin/behat -di
 bin/behat -dl
 bin/behat --name ls
-
 http://docs.behat.org/en/latest/guides/2.definitions.html
 
-=>=>=>=>=>=>=>=>=>M I N K=>=>=>=>=>=>=>=>=>
+M I N K
 https://github.com/Behat/en-mink.behat.org/blob/master/index.rst#form-field-manipulations
 
-=>=>=>=>=>=>=>=>=>URUCHAMIANIE LOKALNIE TESTÓW=>=>=>=>=>=>=>=>=>
+X. URUCHAMIANIE LOKALNIE TESTÓW
 uruchamianie lokalnie testów, tak, żeby przeglądarka sie
 uruchamiała:
 a. otworzyc plik konfiguracyjny behat.base.yml 
-b.z konsoli będąc w katalogu z selenium odpalamy:
-
-
-java -jar selenium-server-standalone-2.42.3.jar
--Dwebdriver.chrome.driver=chromedriver
-
-
-pozwala  to sprawdzic adres lokalny kompa
-:http://127.0.0.1:4444/wd/hub
-
-
-b. w części IOKI\FunctionalTestsBundle\Behat\MinkExtension:
-robimy po wpisie wd_host: '10.157.49.172:4444/wd/hub'
-ctrl+d i wpisujemy:(uwaga ba ilsoc spacji ipowinno byc 8)
-wd_host:  'http://127.0.0.1:4444/wd/hub'
-=>>>> jest to lokalny adres mojego PC
-
-
-c.zakomentowac linie #wd_host: '10.157.49.172:4444/wd/hub'
-d. odpalic selenium
+b. z konsoli będąc w katalogu z selenium odpalamy:
+   java -jar selenium-server-standalone-2.42.3.jar -Dwebdriver.chrome.driver=chromedriver
+   pozwala  to sprawdzic adres lokalny kompa:http://127.0.0.1:4444/wd/hub
+c. w części IOKI\FunctionalTestsBundle\Behat\MinkExtension:
+   robimy po wpisie wd_host: '10.157.49.172:4444/wd/hub'
+   ctrl+d i wpisujemy:(uwaga ba ilsoc spacji ipowinno byc 8)
+   wd_host:  'http://127.0.0.1:4444/wd/hub'- jest to lokalny adres mojego PC
+d. zakomentowac linie #wd_host: '10.157.49.172:4444/wd/hub'
+e. odpalic selenium
+f. odpalic test behata: bin/behat 
  
-e. odpalic test behata: bin/behat 
- 
-
+XI. PRACA
 
 1. Screen lock
 	1.1 sudo yum install xscreensaver 
