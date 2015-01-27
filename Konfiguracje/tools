@@ -244,6 +244,8 @@ alias gc.="git checkout ."
 alias gau="git add -u"
 alias gcm="git checkout master"
 alias glp="git log --pretty=format:'%Cred%h%Creset %d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
+alias glo="git log --graph --decorate --oneline --abbrev-commit --all"
+
 
 => vim .gitignore i w środku dodac pliki ktore maja byc ignorowane
 => git ls-tree HEAD
