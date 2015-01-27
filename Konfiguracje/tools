@@ -129,6 +129,7 @@ http://git-scm.com/docs/git-stash
 http://readwrite.com/2013/10/02/github-for-beginners-part-2
 http://alblue.bandlem.com/Tag/git/
 http://longair.net/blog/2009/04/16/git-fetch-and-merge/ fajny o pull i fetch
+http://www.vogella.com/tutorials/Git/article.html#git_addtorepository
 
 1.INSTALACJA
 yum install curl-devel 
@@ -165,6 +166,8 @@ yum install git-core gitweb
 => git pull automatycznie popbiera i merguje  dane z lokalnymi plikami
 => git config --global credential.helper cache ->>>>>> aby nie trzeba było podawac hasła przy pushu
 => git remote show origin  
+=> git blame [filename] - pokazuje zmiany w pliku, # git blame shows the author and commit per line of a file
+=> git shortlog 
 
 3. Wyświetlanie nazwy brancha w prompt:
 	http://fedoraproject.org/wiki/Git_quick_reference
