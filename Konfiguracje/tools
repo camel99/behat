@@ -232,6 +232,19 @@ e. narzędzie graficzne do mergowania=> git mergetool
 => git push -u origin master
 
 7. Polecenia różne
+Dodanie aliasów do pliku ~/.bashrc :
+alias gs="git status"
+alias gd="git diff"
+alias gsh="git stash"
+alias gshp="git stash pop"
+alias gpr="git pull --rebase"
+alias gbv="git branch -vv"
+alias gl="git log"
+alias gc.="git checkout ."
+alias gau="git add -u"
+alias gcm="git checkout master"
+alias glp="git log --pretty=format:'%Cred%h%Creset %d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
+
 => vim .gitignore i w środku dodac pliki ktore maja byc ignorowane
 => git ls-tree HEAD
 => git ls-tree master <nazwaKatlogu> wyswietla zawartosc katalogu, ekploracja katalogu
