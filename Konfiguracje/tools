@@ -94,7 +94,6 @@ EXAMPLES:
 | 12    | 5   | 7
 | 20    | 5   | 15
 wszystko pomiędzy < > jest traktowane jako placeholder (jako zmienna) i jest zastępowane danymi z sekcji EXAMPLES (poza 1 wierszem)
-<<<<<<< HEAD
 => Używaj table. Nie myl ich ze SCENARIO OUTLINE
 => tagi oddziela się spacjami @tag1 @tag2 @tag3
 => komentarz we feature musi miec format :
@@ -130,6 +129,8 @@ http://readwrite.com/2013/10/02/github-for-beginners-part-2
 http://alblue.bandlem.com/Tag/git/
 http://longair.net/blog/2009/04/16/git-fetch-and-merge/ fajny o pull i fetch
 http://www.vogella.com/tutorials/Git/article.html#setup_rebase - bardzo fajna stronka
+http://www.vogella.com/tutorials/Git/article.html#git_addtorepository
+
 
 1.INSTALACJA
 yum install curl-devel 
@@ -166,6 +167,9 @@ yum install git-core gitweb
 => git pull automatycznie popbiera i merguje  dane z lokalnymi plikami
 => git config --global credential.helper cache ->>>>>> aby nie trzeba było podawac hasła przy pushu
 => git remote show origin  
+=> git blame [filename] - pokazuje zmiany w pliku, # git blame shows the author and commit per line of a file
+=> git shortlog 
+
 
 3. Wyświetlanie nazwy brancha w prompt:
 	http://fedoraproject.org/wiki/Git_quick_reference
@@ -233,6 +237,21 @@ e. narzędzie graficzne do mergowania=> git mergetool
 => git push -u origin master
 
 7. Polecenia różne
+
+Dodanie aliasów do pliku ~/.bashrc :
+alias gs="git status"
+alias gd="git diff"
+alias gsh="git stash"
+alias gshp="git stash pop"
+alias gpr="git pull --rebase"
+alias gbv="git branch -vv"
+alias gl="git log"
+alias gc.="git checkout ."
+alias gau="git add -u"
+alias gcm="git checkout master"
+alias glp="git log --pretty=format:'%Cred%h%Creset %d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
+alias glo="git log --graph --decorate --oneline --abbrev-commit --all"
+
 => vim .gitignore i w środku dodac pliki ktore maja byc ignorowane
 => git ls-tree HEAD
 => git ls-tree master <nazwaKatlogu> wyswietla zawartosc katalogu, ekploracja katalogu
