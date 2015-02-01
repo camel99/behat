@@ -26,6 +26,7 @@ http://www.infoq.com/articles/Gerrit-jenkins-hudson
 Jenkins
 https://www.youtube.com/watch?v=PklYO2vYIfc
 http://systemsarchitect.net/continuous-integration-for-php-with-jenkins/
+http://jenkins-php.org/integration.html
 1. sudo yum update
 2. install Jenkins
 a. Pobrać plik z http://pkg.jenkins-ci.org/redhat/
