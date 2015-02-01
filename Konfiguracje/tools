@@ -22,7 +22,65 @@ c. Dodać pluginy:
 https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+RedHat+distributions
 http://pkg.jenkins-ci.org/redhat/
 http://www.infoq.com/articles/Gerrit-jenkins-hudson
-
+*********************************************************
+Jenkins
+https://www.youtube.com/watch?v=PklYO2vYIfc
+http://systemsarchitect.net/continuous-integration-for-php-with-jenkins/
+1. sudo yum update
+2. install Jenkins
+a. Pobrać plik z http://pkg.jenkins-ci.org/redhat/
+b. Z prawami roota instalujemy Jenkins : sudo yum install jenkins
+c. START/STOP/RESTART - sudo service jenkins start/stop/restart
+lub /etc/init.d/jenkins stop/start
+3. Zaaktualizowac pluginy w Jenkins:http://localhost:8080/pluginManager/advanced i kliknąc "Check Now" na dole strony.
+4. Dodać pluginy:
+- SCM API Plugin
+- Gerrit Trigger
+- GITHub Plugin
+- GitHub API PLugin
+- GIT client plugin
+- GIT Plugin
+- oraz te :https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin z dependencies
+5. sprawdzenie IP maszyny 
+sudo cat /etc/hosts
+6. Wykonanie poleceń (uwaga to jest dla projektów PHP, wiec wystarczy zainstalowac pkt. a,b,c):
+http://systemsarchitect.net/continuous-integration-for-php-with-jenkins/
+a. $ wget http://localhost:8080/jnlpJars/jenkins-cli.jar
+# install dependencies for the template
+b. $ java -jar jenkins-cli.jar -s http://localhost:8080 install-plugin checkstyle cloverphp dry htmlpublisher jdepend plot pmd violations xunit
+c. $ java -jar jenkins-cli.jar -s http://localhost:8080 safe-restart
+d. $ sudo apt-get install curl
+# install the template
+e. $ curl https://raw.github.com/sebastianbergmann/php-jenkins-template/master/config.xml | java -jar jenkins-cli.jar -s http://localhost:8080 create-job php-template
+f. $ java -jar jenkins-cli.jar -s http://localhost:8080 safe-restart
+7. Go to:
+cd /var/lib/jenkins/jobs -> pokazuje joby jenkinsa, dobrze jest najpierw stworzyc job w jenkinsie np. test i tam powinien on sie pokazać
+8. będąc w powyższym katalogu robimy:
+sudo chown -R jenkins:jenkins test
+9. Update jenkinsa:
+a. Pobrac update w postaci pliku jenkins.war
+b.scp /home/maciej/Pobrane/jenkins.war /lib/jenkins -> przeniesienie pobranego pliku jenkins.war z katalogu pobrane do katalogu /lib/jenkins
+c. http://localhost:8080 safe-restart
+10. Tworzymy katalog na projekt.
+a. /home/maciej/jenkins
+b. git clone https://github.com/camel99/jenkins.git
+c. cd jenkins
+d. git checkout develop -> tworze sobie branch develop
+11. Edytujemy joba w Jenkinsie:
+a. mozna sprobowac zrobic job jako kopia joba. czyli new item-> nazwa -> kopiuj z istniejącego item i tu podac php-template, jesli 
+wykonano pkt 6e.
+b. w source podajemy adres gita: https://github.com/camel99/jenkins.git
+c. Ustawienie kluczy SSH:
+ # sudo jenkins
+ # cd /var/lib/jenkins
+ # ls -al szukamy katalogu .ssh, jesli go nie ma to tworzymy jako: mkdir .ssh 
+ # cd .ssh
+ # ssh-keygen -t rsa -C "maciej.kamela@wp.pl" UWAGA! generujac klucz robimy caly czas Enter, nie podawac "passphrase" (ma byc puste)
+ # ls -al powinien byc pliki id_rsa (prywatny) id_rsa.public (publiczny)
+ # mozna sprobowac wyedytowac plik id_rsa.public i podac klucz do projektu nse-client
+ # cat id_rsa.public i klucz kopiujemy w ustawienia githuba, w ustawieniach SSH
+ 
+**************************************************************
 II.GITHUB
 1. Zakładamy repo na stronie https://github.com/camel99/php.git
 2. gdzie koncowka php.git oznacza nazwę repozytorium
