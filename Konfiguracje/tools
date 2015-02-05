@@ -164,6 +164,7 @@ wszystko pomiędzy < > jest traktowane jako placeholder (jako zmienna) i jest za
 VI. LINUX
 1. Sprawdzenie aktywnych procesów.
 systemctl list-units --type=service
+locate bashrc -> pokazuje lokalizacje pliku
 
 VII.PHP
 1. sprawdzanie czy serwer jest odpalony : systemctl is-active httpd.service
@@ -237,7 +238,7 @@ Add this these 4 lines to ~/.bashrc (będąc sudo):
 			export GIT_PS1_SHOWDIRTYSTATE=true
 			export GIT_PS1_SHOWUNTRACKEDFILES=true
 To activate bash configuration changes, run source ~/.bashrc. 
-2. Lepiej do pliku .bashrc dodać:
+2. Lepiej do pliku .bashrc dodać:(plik znajduje sie w /etc/bashrc => locate bashrc
 	source /usr/share/git-core/contrib/completion/git-prompt.sh
 	export GIT_PS1_SHOWDIRTYSTATE=true
 	export GIT_PS1_SHOWUNTRACKEDFILES=true
@@ -607,6 +608,7 @@ v.$ phpcs -i
 vi.$ phpcs -s /path/to/code/myfile.php
 vii.$ phpcs -a /path/to/code
 
+13. Polecenia
 
 
 
