@@ -609,7 +609,27 @@ v.$ phpcs -i
 vi.$ phpcs -s /path/to/code/myfile.php
 vii.$ phpcs -a /path/to/code
 
-13. Polecenia
+13. Protractor & Cucumber
+I. instalacja
+a. Jeśli już nie działa
+rm -rf should/
+rm -rf cucumber/
+rm -rf protractor/
+rm -rf protractor-cucumber/
+sudo npm -g rm cucumber
+sudo npm -g rm protractor
+sudo npm -g rm protractor-cucumber
+sudo npm -g rm should
+b. Czysta instalacja
+npm install
+sudo npm install -g cucumber
+sudo npm install -g protractor
+sudo npm install should
+sudo npm install protractor-cucumber
+cucumber.js
+c. Sprawdzenie co zainstalowane lokalnie a co globalnie
+npm list -g
+npm list -g protractor-cucumber
 
 
 
