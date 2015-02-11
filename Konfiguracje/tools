@@ -211,11 +211,13 @@ yum install git-core gitweb
 => git add "nazwa pliku" dodanie do śledzenia
 => git diff co zostało zmienione w pliku
 => git diff --cached bardziej szczegółowe
+=> git diff --unified=10 -> zwieksza liczbe wyswietlanych wierszy z 3 do 10
 => git log historia zmian w plikach
 => git log -p
 => git log -p-2 - pokazuje 2ostatnie zmiany
 => git log --stat - pokazuje tez statystyki
 => git log --pretty=online/short/full/fuller/format - pokazuje dokladne zmiany
+=> git log --nazwa_pliku -> wyswietli rewizje, ktora zmienila plik
 => git commit -m "komentarz" - zatwierdzenie z komentarzem
 => git commit -a - zatwierdzenia z pominięciem poczekalni
 => git reset HEAD "nazwa pliku" - usuwanie pliku z poczekalni
@@ -229,6 +231,9 @@ yum install git-core gitweb
 => git remote show origin  
 => git blame [filename] - pokazuje zmiany w pliku, # git blame shows the author and commit per line of a file
 => git shortlog 
+=> git shortlog -s -n -> sprawdza uczestnikow projektu
+=> git shortlog -s -n | wc -1 -> sprawdza liczbe uczestnikow projektu
+=> gitk i git gui
 
 3. Wyświetlanie nazwy brancha w prompt:
 	http://fedoraproject.org/wiki/Git_quick_reference
@@ -327,9 +332,17 @@ alias glo="git log --graph --decorate --oneline --abbrev-commit --all"
 => git show <trzeba podac sha np. z git log --oneline>
 => git config --global alias.logg "log --graph --decorate --oneline --abbrev-commit --all" ->>>> alias
 => git tag -> wyświetla liste tagów
+=> git describe --tags -> pokazuje tagi
+=> git show -s nazwa_taga -> szczegolowe dane o tagu
 => git tag 1.2 -m"wydanie 1.2" -> taguje zmiane z komunikatem 
+=> git tag -a Nazwa -m Komentarz
 => git show 1.2 -> show the tag
 => git checkout <tag_name>  -> przechodzenie na wersje z tag'a
+=> git reflog -> sprawdza zawartość dziennika 
+=> git revert --no-edit SSH commita -> wycofuje zmiane
+=> git fetch nazwa_repo_zdalnego nazwa_galezi_zdalnej -> pobiera rewizje ze zdalnej galezi np. git fetch origin master,
+   samo git fetch pobiera zmiany z galezi ustawionej jako trackowana komenda --set-upstream. 
+   Aby dołaczyc pobrane rwizje trzeba zrobić: git merge repo_zdalne/galęź_zdalna
 => By default the git push command does not transfer tags to remote repositories. 
    You explicitly have to push the tag with the following command. 
 	# push a tag or branch called tagname
@@ -358,6 +371,7 @@ https://www.atlassian.com/git/tutorials/syncing/git-fetch
 => git log --oneline origin/master pokazuje zmiany na zdalnym repo
 => git branch -r pokazuje zdalne gałęzie
 => git branch -a
+=> git branch --set-upstream galaz_lokalna galaz zdalna -> trackowanie brancha
 => git push origin --delete nazwa_zdalnego_brancha  ->>>>>>>>>> usuwa zdalny branch
 => You mostly do with remote-tracking branches is one of the following:
 
