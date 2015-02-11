@@ -631,6 +631,9 @@ c. Sprawdzenie co zainstalowane lokalnie a co globalnie
 npm list -g
 npm list -g protractor-cucumber
 
+14. Zmiana API w projekcie
+w pliku MainContext trzeba zmienić API z dev na np. st => nie commituj tego pliku
+
 
 
 
