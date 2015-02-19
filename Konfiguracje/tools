@@ -650,6 +650,12 @@ w pliku MainContext trzeba zmienić API z dev na np. st => nie commituj tego pli
 
 document.querySelectorAll('#students-list-table tr').length
 
+15. Virtualki
+a. pobrac wirtualki ze strony https://www.modern.ie/en-us/virtualization-tools#downloads
+b.instalacja virtualBoxa http://www.tecmint.com/install-virtualbox-on-redhat-centos-fedora/
+c. odpalic virtualBox: VirtualBox
+d.rozpakowany plik z wirtualką zaimportować http://www.maketecheasier.com/import-export-ova-files-in-virtualbox/
+
 
 
 
