@@ -655,7 +655,7 @@ a. pobrac wirtualki ze strony https://www.modern.ie/en-us/virtualization-tools#d
 b.instalacja virtualBoxa http://www.tecmint.com/install-virtualbox-on-redhat-centos-fedora/
 c. odpalic virtualBox: VirtualBox
 d.rozpakowany plik z wirtualką zaimportować http://www.maketecheasier.com/import-export-ova-files-in-virtualbox/
-
+e. dodanie portu 9000: 
 
 
 
