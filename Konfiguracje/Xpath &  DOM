@@ -1,0 +1,18 @@
+1. Manipulowanie elementami strony
+$('p')
+$('<h1>')
+$('p').text('dodalem text do elementu "p"')
+$('<li>').text("dodalem element li  z tym tekstem).appendTo('.items') -> '.items' to nazwa klasy w pliku HTML np. <div class="items">
+  .appendTo() -> dodaje na koncu
+  .prependTo() -> dodaje element na początku
+  .remove() -> usuwa wybrany element HTML
+  .hide() -> ukrywa element
+  .show() -> wyswietla element
+  .toggle() -> wyświetla/ukrywa element na stronie (przełącznik)
+  .addClass() -> dodaje klase CSS do elementu
+  .removeClass -> usuwa klase z elementu
+  .toggleClass -> dodaje lub usuwa klase z elementu (przełącznik)
+  .next() -> kolejne rodzenstwo wybranego elementu z drzewa HTML
+  .prev() -> poprzednie rodzeństwo wybranego elementu
+  .children -> wybiera dzieci wybranego elementu
+  
