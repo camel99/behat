@@ -1,0 +1,44 @@
+JAVA SCRIPT:
+=> interakcja:
+confirm("maciej kamela is awesome");
+prompt("What is your name");
+console.log("wyswietl to");
+alert("Uwaga uwaga");
+JavaScript can "display" data in different ways:
+    Writing into an alert box, using window.alert().
+    Writing into the HTML output using document.write().
+    Writing into an HTML element, using innerHTML.
+    Writing into the browser console, using console.log().
+=> konkatenacja - "+": text1 + text2
+=> typy danych: 
+var length = 16;                               // Number
+var lastName = "Johnson";                      // String
+var cars = ["Saab", "Volvo", "BMW"];           // Array
+var x = {firstName:"John", lastName:"Doe"};    // Object
+var object ={
+    firstName:"Maciej",
+    lastName:"kamela",
+    age:32};
+console.log((object.lastName).toUpperCase());
+=> tworzenie obiektów:
+1. Using an Object Literal -> var obiekt = {
+                                            firstName:"Maciej",
+                                            lastName:"Kamela",
+                                            age:32,
+                                            fullName : function() {
+                                            return this.firstName + " " + this.lastName;};
+2.Using the JavaScript Keyword new ->  var obiekt =new person;
+obiekt.firstName = "Maciej";
+obiekt.lastName = "Kamela";
+obiekt.age = 32;
+3. Using an Object Constructor -> function person(first, last, age, eyecolor) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eyecolor;
+    this.fullName = function() {
+       return this.firstName + " " + this.lastName;
+}
+var myFather = new person("John", "Doe", 50, "blue");
+myFather.fullName();
+var myMother = new person("Sally", "Rally", 48, "green");
