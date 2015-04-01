@@ -685,6 +685,9 @@ bin/behat --tags 'catalogueTool' -f html -o ./build
 f. weryfikacja raportu: w konsoli wpisujemy:
 firefox ./build/report.html 
 
+17. Podłaczanie dysku z wymianą IOKI
+a. z poziomu menadzera plików smb://iokiserver2/wymiana
+
 
 
 
