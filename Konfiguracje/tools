@@ -684,9 +684,36 @@ czyli:
 bin/behat --tags 'catalogueTool' -f html -o ./build
 f. weryfikacja raportu: w konsoli wpisujemy:
 firefox ./build/report.html 
+g. Raport podobny do tego z BEHAT 2.0
+	cd vendors_behat/emuse/behat-html-formatter/
+	git pull
+	cd ../../..
+	następnie dodajcie do pliku behat.yml renderer: Twig,Behat2. u mnie to wygląda tak:
+    emuse\BehatHTMLFormatter\BehatHTMLFormatterExtension:
+      name: html
+      renderer: Twig,Behat2
 
 17. Podłaczanie dysku z wymianą IOKI
 a. z poziomu menadzera plików smb://iokiserver2/wymiana
+
+18. Srodowisko na virtual box
+a. zainstalowane:
+Git -> trzeba skopiowac klucze na wirtualke, te które uzywasz normalnie do ściagania repozytoriow.
+	Mozna zrobic z konsoli GITa ssh-keygen i w tym katalopgu zastapic wygenerowane klucze tymi uzywanymi w projekcie.
+Source tree -> narzeðzie do zarządzania GITem
+Visual studio Express -> 
+a.nalezy otworzyc solucje "PearsonEnglish.LearningServices.sln".
+b.w katalogu we.config w pliku web.NSE Debug.config odkomentować <add name=LearningServices" connectionString="metadata=res://*/DataContexts.LearningAervices.csdl|res .......> 
+c.w katalogu we.config w pliku web.NSE Debug.config ( w pliku z punktu a) w connection string podać adres serwera (z MS management studio)
+	"VIRT-DEV-N246\SQLEXPRESS" to nazwa mojej bazy danych.
+d. z katalogu DataContext\NSE należy odpalić skrypty:
+# NSELSSystemData.sql
+# NSELSCourseData.sql
+# TypeData.sql
+# DBSchema.txt
+e. w pasku narzedzi w oknie debug należy wybrać "NSES debug" i kliknąć zieloną strzałkę
+MS Management Studio
+MS server
 
 
 
