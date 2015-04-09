@@ -42,3 +42,13 @@ obiekt.age = 32;
 var myFather = new person("John", "Doe", 50, "blue");
 myFather.fullName();
 var myMother = new person("Sally", "Rally", 48, "green");
+
+
+II. Back end
+http://www.w3schools.com/xml/xml_parser.asp
+
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "http://www.codecademy.com/", false);
+xhr.send();
+console.log(xhr.status);
+console.log(xhr.statusText);
