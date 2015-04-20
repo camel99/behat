@@ -714,7 +714,50 @@ d. z katalogu DataContext\NSE należy odpalić skrypty:
 e. w pasku narzedzi w oknie debug należy wybrać "NSES debug" i kliknąć zieloną strzałkę
 MS Management Studio
 MS server
+19. Stawianie frontu lokalnego
+Jeszcze raz przepis na stawianie lokalnego frontu:
 
+Wymagane programy:
+Local Frontend Env. Installation:
+
+a. git and configure SSH key
+b. node  - take newest (info: http://fedoraproject.org/wiki/Features/NodeJS)
+    yum install nodejs
+    yum install npm
+c. grunt - (info: npm http://gruntjs.com/)
+    sudo npm install -g grunt
+    sudo npm install -g grunt-cli
+d. bower http://bower.io/
+        npm install -g bower
+    sudo nr
+e. rvm and ruby http://rvm.io/rvm/install required version ruby 1.9.3
+    sudo apt-get install ruby-full
+    rvm install 1.9.3
+    rvm --default ruby-1.9.3
+f. Compass (TEST THIS STEP)
+    gem update --system
+    gem install compass
+
+g. UBUNTU: sudo apt-get install bundler
+
+h. git clone <url>
+i. go to application folder
+    1. bundle install
+    2. npm install
+    3. dla pewności można zrobić bower install i potem grunt build i w dist powinna byc zbudowana wersja
+j. Finally folder dist contains current build
+    
+k. Selenium Server (http://www.seleniumhq.org/download/)
+l. chromedriver (https://code.google.com/p/selenium/wiki/ChromeDriver)
+
+URUCHAMIANIE
+Do uruchamiania potrzebane:
+- git pull + lub pobranie z brancha
+- czasem wiedza przełącznie sie na API (dev, test...) lub skrypt
+- reczne manualna zdolnosci w postaci polecen: npm install, bower install, grunt, grunt build:test, grunt serve:dist
+- LUB skrypt, który robi to co powyżej - prosze sie usmiechac 
+
+Po przetestowaniu powyższych kroków lokalnym kompu prosze o dopisanie do confluence.
 
 
 
