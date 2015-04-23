@@ -759,6 +759,19 @@ Do uruchamiania potrzebane:
 
 Po przetestowaniu powyższych kroków lokalnym kompu prosze o dopisanie do confluence.
 
+19. ZAKŁADANIE UZYTKOWNIKA W SSDS
+http://newsdszone1.wsiqual.dom/standard/index.jhtml
+159.182.18.91 	newsdszone1.wsiqual.dom
+witryna do zaufanych
+a. zakladamy uzytkownika tu https://159.182.18.91/
+ale najpierw trzeba zedytować plik w Windows "C:\Windows\System32\drivers\etc\hosts"
+i wkleic tam: 159.182.18.91	newsdszone1.wsiqual.dom
+b. Nastepnie trzeba zalogować się credentialami nowego studenta przez bubla:
+https://159.182.18.93 -> ten adres łaczy się z API denselsqa, jesli chcesz żeby dany student byl widzoczny na innej bazie/srodowisku to trzeba zrobić:
+https://159.182.18.93/?redirecturl=http://localhost:9000 ten url(lub podac jakiś inny np ST) łaczy sie z API ustawionym w config.js i w ten sposób to APi 
+jest aktualizowane nowym studentem
+
+
 
 
 
