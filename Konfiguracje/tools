@@ -771,6 +771,11 @@ https://159.182.18.93 -> ten adres łaczy się z API denselsqa, jesli chcesz że
 https://159.182.18.93/?redirecturl=http://localhost:9000 ten url(lub podac jakiś inny np ST) łaczy sie z API ustawionym w config.js i w ten sposób to APi 
 jest aktualizowane nowym studentem
 
+20. InteliJ + BEHAT
+a. trzeba zaintslowac plugin Behat support.
+b. w katalogu z testami nalezy zrobic: composer install (zainataluje behata na podstawie pliku composer.json) ! dla windowsa:
+http://comm-press.de/en/blog/installing-behat-windows
+
 
 
 
