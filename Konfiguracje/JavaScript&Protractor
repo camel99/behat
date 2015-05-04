@@ -29,7 +29,7 @@ console.log((object.lastName).toUpperCase());
                                             age:32,
                                             fullName : function() {
                                             return this.firstName + " " + this.lastName;};
-2.Using the JavaScript Keyword new ->  var obiekt =new person;
+2.Using the JavaScript Keyword new ->  var obiekt =new person();
 obiekt.firstName = "Maciej";
 obiekt.lastName = "Kamela";
 obiekt.age = 32;
@@ -79,5 +79,15 @@ brak jakiegos z parametrow powoduj blad wykonania funkcji.
     var pos = cos.indexOf("ciej");
     console.log(pos);
 - string methods: lastIndexOf,split, slice, indexOf, substring,substr,toLowerCase, toUpperCase,
-
+- Date(): var today = Date(); var styczen2000_15 = Date(2000,0,15);-> miesiace zaczynaja sie od 0-11 czyli stycz=0, luty=1 itd.
+- today.getMonth(); today.getFullYear();today.getDate();today.getDay();today.getTime();today.getHours();-> var mojeUrodziny = new Date(1983,05,9);
+    console.log("urodzilem sie: ", mojeUrodziny.getDay());-> wynik to czwartek
+- set date: today.setMonth(5);today.setFullYear(2012);today.setDay(5);
+- compare Date: date1.getTime() == date2.getTime()
+5.DOM
+- myElement.getAttribute("align");
+- myElement.setAttribute("align", "left");
+var mojEelementNaStronie =document.getElementById("idElementu");
+mojEelementNaStronie.setAttribute("align","left");
+- innerHTML
 
