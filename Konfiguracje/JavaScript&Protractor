@@ -106,6 +106,7 @@ newParagraph.appendChild(paraText);
 document.getElementById("trivia").appendChild(newHeading);
 document.getElementById("trivia").appendChild(newParagraph);
 6.Events
+- onfocus, onblur,onchange,onkeypress,onkeydown,onkeyup
     myElement.onclick = function () {
     // do sth
     }; // wazne zeby byl na koncu srednik tak jak przy zwyklym przypisaniu var x =5;
@@ -124,3 +125,8 @@ emailField.onblur = function() {
 		emailField.value = "your email";
 	}
 };
+- dropdown lists
+mySelect.type - tu moze byc select one or select multiple, wybiaramy jedna opcje z listy lub wiele
+mySelect.selectIndex - jesli jest tylko jedna opcja mozliwa do wybrania
+mySelect.options[x].selected - gdzie "x" to numer indesku w tablicy (kazdy element na liscie ma indeks 0,1,2...)
+- onsubmit 
