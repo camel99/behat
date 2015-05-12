@@ -130,3 +130,8 @@ mySelect.type - tu moze byc select one or select multiple, wybiaramy jedna opcje
 mySelect.selectIndex - jesli jest tylko jedna opcja mozliwa do wybrania
 mySelect.options[x].selected - gdzie "x" to numer indesku w tablicy (kazdy element na liscie ma indeks 0,1,2...)
 - onsubmit 
+7. Regular Expressions
+http://www.w3schools.com/js/js_regexp.asp
+
+8. Funkcje na stronie- Window WAZNE
+http://www.w3schools.com/js/js_window.asp
