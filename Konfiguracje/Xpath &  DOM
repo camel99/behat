@@ -16,3 +16,5 @@ $('<li>').text("dodalem element li  z tym tekstem).appendTo('.items') -> '.items
   .prev() -> poprzednie rodzeństwo wybranego elementu
   .children -> wybiera dzieci wybranego elementu
   
+# document.querySelectorAll('.socialMedia') -> wybiera wszystkie elementy o okreslonej klasie;
+  
