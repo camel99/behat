@@ -56,13 +56,30 @@ xhr.send();
 console.log(xhr.status);
 console.log(xhr.statusText);
 3. Funkcje
-Jesli w definicji funckji byly tylko 3 parametry a w wywolaniu 4 to ten czwarty parametr zostanie przez JavaScript pominiety
+#Jesli w definicji funckji byly tylko 3 parametry a w wywolaniu 4 to ten czwarty parametr zostanie przez JavaScript pominiety
 przyklad:
 function retriveInformation(when, where, who){
 // do something here
 }
 retriveInformation("today", "poznan","me", "something extra);// extras are ignored
 brak jakiegos z parametrow powoduj blad wykonania funkcji.
+# prototype - sluzy do umozliwiania korzystania przez obiekt z funkcji ktora nie jest napisana wew obiektu:
+var speak = function (saySth) {
+console.log(saySth);  
+}
+var Dog = function () {
+  var name, breed;
+}
+Dog.prototype.speakbb = speak;// nazwaClassy.prototype.nazwaNowejFunkcji = nazwaUtworzonejFunkcji
+firstDog = new Dog;
+firstDog.name = 'Burek';
+firstDog.breed = 'puddle';
+firstDog.speak = 'hauuu';
+console.dir(firstDog);
+# call and apply ???
+# var social =functio() {
+}(socialMedia); // ten nawias oznacza automatyczne wywolanie funkcji z parametrem "socialMedia"
+
 4. Tablice
 - brak tablic asocjacyjnych w JS, aby stworzyc tablice z indeksem nazwanym trzeba stworzyc obiekt:
     var person = {firstName:"John", lastName:"Doe", age:46}; 
