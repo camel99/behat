@@ -1,0 +1,18 @@
+1. Syntax
+Instead of using id we can use "#" #submitButton {text-align: center; color:red;}, must be unique.
+div#sidebar {color:blue}
+2. Classa - use "."
+3. How web browser reads CCS:
+#sidebar div p span {color:red;} -> browser reads css from right to left, span, p, div and at the end id
+4. Fonts:
+a. font-familly -> p{font-familly: Arial, Verdena, Helvetica;}; // use when not sure wheter some certain font is installed on client machine
+b. @font-face -> is used to create your own specific fonts,        
+c. font-size -> absolute in "px" or relative in "em" (adjustable to mobile devices) pixels/16=em so 1em=16px
+d. text-indent -> making indentation at the beggining of the text
+e. Select a style: link, visited, hover, active
+    a:hover{color:yellow;}// mouse over link
+5. Border
+a. border-bottom-color
+b. border-color
+c. border-image
+6. Background
