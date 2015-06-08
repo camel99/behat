@@ -30,6 +30,11 @@ console.log((object.lastName).toUpperCase());
                                             age:32,
                                             fullName : function() {
                                             return this.firstName + " " + this.lastName;};
+ function whatIsYourName(){
+ console.log(this.firstName + " " + this.lastName);
+ };
+ obiekt.yourName = whatIsYourName; // przypisuje obiektowi funkcje, ktora moge wywolac jako:
+ obiekt.yourName();
 2.Using the JavaScript Keyword new ->  var obiekt =new person();
 obiekt.firstName = "Maciej";
 obiekt.lastName = "Kamela";
@@ -77,7 +82,7 @@ firstDog.breed = 'puddle';
 firstDog.speak = 'hauuu';
 console.dir(firstDog);
 # call and apply ???
-# var social =functio() {
+# var social =function() {
 }(socialMedia); // ten nawias oznacza automatyczne wywolanie funkcji z parametrem "socialMedia"
 
 4. Tablice
@@ -153,5 +158,18 @@ http://www.w3schools.com/js/js_regexp.asp
 
 8. Funkcje na stronie- Window WAZNE
 http://www.w3schools.com/js/js_window.asp
+
+9. Data i czas
+ var today = new Date();
+ #get methods
+ today.getMonth();
+ today.getFullYear();
+ today.getDate();
+ today.getHours();
+ today.getTime();
+ # set methods
+ today.setMonth(5);
+ today.setFullYear(2012);
+ today.setDay(0);
 
 
