@@ -16,3 +16,10 @@ a. border-bottom-color
 b. border-color
 c. border-image
 6. Background
+    background-attachment - Sets whether a background image is fixed or scrolls with the rest of the page
+    background-color - sets the color
+    background-image - sets the background image for an element
+    background-position -sets the starting position of a background image
+    background-repeat - sets how a background image will be repeated (repeat-y, repeat-x,repeat, no-repeat)
+    background-size
+    background-clip
