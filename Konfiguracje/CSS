@@ -23,3 +23,9 @@ c. border-image
     background-repeat - sets how a background image will be repeated (repeat-y, repeat-x,repeat, no-repeat)
     background-size
     background-clip
+7. Positioning
+    relative, absoulte
+8. Float: left, right, none
+    .content {float:right;}
+    .sidebar {float:left;}
+    .footer {clear: both;}
