@@ -17,4 +17,5 @@ $('<li>').text("dodalem element li  z tym tekstem).appendTo('.items') -> '.items
   .children -> wybiera dzieci wybranego elementu
   
 # document.querySelectorAll('.socialMedia') -> wybiera wszystkie elementy o okreslonej klasie;
+2. Zdarzenia: <h1 onclick="myFunction()"></h1>
   
