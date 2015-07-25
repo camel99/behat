@@ -29,3 +29,6 @@ c. border-image
     .content {float:right;}
     .sidebar {float:left;}
     .footer {clear: both;}
+9. margin
+    set margin to auto with width for example 100px -> that makes element positioned on the page center:
+    div{ width:100px; margin: auto;}
