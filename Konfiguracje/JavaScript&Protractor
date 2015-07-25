@@ -171,5 +171,12 @@ http://www.w3schools.com/js/js_window.asp
  today.setMonth(5);
  today.setFullYear(2012);
  today.setDay(0);
+10. ForEach
+var cos = [123,456, "maciej", "dom"];
+var display = function(what){ console.log(what)};
+cos.forEach(display);
+11. Return all arguments passed to the function:
+function displayArgs(){ return arguments}
+displayArgs(1213,345,"cat","dog", ["home",1,2,3])
 
 
