@@ -1,4 +1,3 @@
-cos tu dopisalem
 I. JENKINS
 Based on :
 https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+RedHat+distributions
@@ -475,7 +474,7 @@ c. w części IOKI\FunctionalTestsBundle\Behat\MinkExtension:
    robimy po wpisie wd_host: '10.157.49.172:4444/wd/hub'
    ctrl+d i wpisujemy:(uwaga ba ilsoc spacji ipowinno byc 8)
    wd_host:  'http://127.0.0.1:4444/wd/hub'- jest to lokalny adres mojego PC
-d. zakomentowac linie #wd_host: '10.157.49.172:4444/wd/hub'
+d. zakomentowac linie #wd_host
 e. odpalic selenium
 f. odpalic test behata: bin/behat 
  
@@ -574,29 +573,6 @@ cd PHP/CodeSniffer/Standards/
 git clone https://github.com/radepal/Symfony2-coding-standard.git Symfony2
 phpcs --config-set default_standard Symfony2
 
-10. nMEL Project (informacje zebrane i uszczegółowione na podstawie tej strony )
-	10.1 Keygen - http://confluence.ioki.com.pl/display/nMEL3/Gerrit – zakładanie konta pkt 2 i 			3, wyślij klucz publiczny Grzegorzowi abyś miał dostęp do wszystkich 				zasobów dla projektu, po nadaniu dostępów
-	10.2 git clone ssh://uzytkownik_ioki@gerrit.ioki.com.pl:29418/newngmel.git
-	10.3 są potrzebne dwie bazy: <nazwa_uzytkownika>_ngml i 							<nazwa_uzytkownika>_ngml_content w tym celu
-		10.3.1 sudo service mysqld start
-		10.3.2 mysql -u root
-		10.3.3 create database <nazwa_uzytkownika>_ngml;
-		10.3.4 create database <nazwa_uzytkownika>_ngml_content;
-		10.3.5 create user user;
-		10.3.6 grant all on <nazwa_uzytkownika>_ngml.* to 'user'@'localhost' identified by 'password';
-		10.3.7 grant all on <nazwa_uzytkownika>_ngml_content.* to 'user'@'localhost' identified by 'password';
-	10.4 W projekcie tworzymy dwa katalogi i dajemy im uprawnienia
-		10.4.1 mkdir app/cache
-		10.4.2 mkdir app/logs
-		10.4.3 chmod 0777 -R app/cache app/logs
-	10.5 W parameters.ini dodajemy root_url
-			root_url = "http://localhost/newngmel/web"
-	10.6 ./configure_script.sh --prod-db-host=localhost –prod-db-port=3306 –prod-db-name=baza_ngml --prod-db-user=user --prod-db-password=password –content-db-name=baza_ngml_content;
-	10.7 php app/console assetic:dump; php app/console assetic:dump –env=prod
-	10.8 powiązanie do folderu /var/www/html (w ten sposób projekt może być w lokalnym folderze)
-		sudo ln -s /home/jacekblendowski/Git/newngmel /var/www/html/newngmel
-	10.9 Działa użytkownicy i hasła są tutaj, a adres jest taki: 							http://localhost/newngmel/web/app_dev.php/login
-
 11. Behat config
 	11.1 Przed wykonaniem instrukcji ze strony wykonaj: sudo yum install pv
 11.2 Selenium-server-standalone pobieramy z głównej strony Selenium - najnowszą dostępną wersję
@@ -647,10 +623,6 @@ c. Sprawdzenie co zainstalowane lokalnie a co globalnie
 npm list -g
 npm list -g protractor-cucumber
 
-14. Zmiana API w projekcie
-w pliku MainContext trzeba zmienić API z dev na np. st => nie commituj tego pliku
-
-document.querySelectorAll('#students-list-table tr').length
 
 15. Virtualki
 a. pobrac wirtualki ze strony https://www.modern.ie/en-us/virtualization-tools#downloads
@@ -673,9 +645,9 @@ d. do pliku behat.yml dodaj
 plik ma wyglądć tak:
   extensions:
     IOKI\FunctionalTestsBundle\Behat\MinkExtension:
-      #base_url: 'http://stagensels.azurewebsites.net/'
-      #base_url: 'http://devnselsqadd.azurewebsites.net'
-      #base_url: 'http://testnsest.azurewebsites.net'
+      #base_url: 'http://stage.azure
+      #base_url: 'http://devns.azure
+      #base_url: 'http://test.azure'
       base_url: 'http://localhost:9000'
     emuse\BehatHTMLFormatter\BehatHTMLFormatterExtension:
       name: html
@@ -758,18 +730,6 @@ Do uruchamiania potrzebane:
 - LUB skrypt, który robi to co powyżej - prosze sie usmiechac 
 
 Po przetestowaniu powyższych kroków lokalnym kompu prosze o dopisanie do confluence.
-
-19. ZAKŁADANIE UZYTKOWNIKA W SSDS
-http://newsdszone1.wsiqual.dom/standard/index.jhtml
-159.182.18.91 	newsdszone1.wsiqual.dom
-witryna do zaufanych
-a. zakladamy uzytkownika tu https://159.182.18.91/
-ale najpierw trzeba zedytować plik w Windows "C:\Windows\System32\drivers\etc\hosts"
-i wkleic tam: 159.182.18.91	newsdszone1.wsiqual.dom
-b. Nastepnie trzeba zalogować się credentialami nowego studenta przez bubla:
-https://159.182.18.93 -> ten adres łaczy się z API denselsqa, jesli chcesz żeby dany student byl widzoczny na innej bazie/srodowisku to trzeba zrobić:
-https://159.182.18.93/?redirecturl=http://localhost:9000 ten url(lub podac jakiś inny np ST) łaczy sie z API ustawionym w config.js i w ten sposób to APi 
-jest aktualizowane nowym studentem
 
 20. InteliJ + BEHAT
 a. trzeba zaintslowac plugin Behat support.
