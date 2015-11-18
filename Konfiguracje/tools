@@ -736,6 +736,9 @@ a. trzeba zaintslowac plugin Behat support.
 b. w katalogu z testami nalezy zrobic: composer install (zainataluje behata na podstawie pliku composer.json) ! dla windowsa:
 http://comm-press.de/en/blog/installing-behat-windows
 
+21. Tworzenie dowiązania pliku:
+    ln -s ~/QADashboard/report.zip /var/www/html/rap.zip
+    ll /var/www/html
 
 
 
